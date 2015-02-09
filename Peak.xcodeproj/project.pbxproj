@@ -9,11 +9,23 @@
 /* Begin PBXBuildFile section */
 		AD8916DD1A88F38700AD5D54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8916DC1A88F38700AD5D54 /* main.m */; };
 		AD8916E01A88F38700AD5D54 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8916DF1A88F38700AD5D54 /* AppDelegate.m */; };
-		AD8916E31A88F38700AD5D54 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8916E21A88F38700AD5D54 /* ViewController.m */; };
-		AD8916E61A88F38700AD5D54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD8916E41A88F38700AD5D54 /* Main.storyboard */; };
 		AD8916E81A88F38700AD5D54 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD8916E71A88F38700AD5D54 /* Images.xcassets */; };
 		AD8916EB1A88F38700AD5D54 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD8916E91A88F38700AD5D54 /* LaunchScreen.xib */; };
 		AD8916F71A88F38700AD5D54 /* PeakTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8916F61A88F38700AD5D54 /* PeakTests.m */; };
+		AD89170D1A892A9E00AD5D54 /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD89170B1A892A9E00AD5D54 /* LogInViewController.m */; };
+		AD89170E1A892A9E00AD5D54 /* LogInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD89170C1A892A9E00AD5D54 /* LogInViewController.xib */; };
+		AD8917121A892AAB00AD5D54 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8917101A892AAB00AD5D54 /* SignUpViewController.m */; };
+		AD8917131A892AAB00AD5D54 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD8917111A892AAB00AD5D54 /* SignUpViewController.xib */; };
+		AD8917171A892ABC00AD5D54 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8917151A892ABC00AD5D54 /* MainViewController.m */; };
+		AD8917181A892ABC00AD5D54 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD8917161A892ABC00AD5D54 /* MainViewController.xib */; };
+		AD89171C1A892AC900AD5D54 /* PlaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD89171A1A892AC900AD5D54 /* PlaceViewController.m */; };
+		AD89171D1A892AC900AD5D54 /* PlaceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD89171B1A892AC900AD5D54 /* PlaceViewController.xib */; };
+		AD8917211A892AD700AD5D54 /* CreatePlaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD89171F1A892AD700AD5D54 /* CreatePlaceViewController.m */; };
+		AD8917221A892AD700AD5D54 /* CreatePlaceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD8917201A892AD700AD5D54 /* CreatePlaceViewController.xib */; };
+		AD8917261A892B2900AD5D54 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8917241A892B2900AD5D54 /* ProfileViewController.m */; };
+		AD8917271A892B2900AD5D54 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD8917251A892B2900AD5D54 /* ProfileViewController.xib */; };
+		AD89172B1A892B3600AD5D54 /* EditProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8917291A892B3600AD5D54 /* EditProfileViewController.m */; };
+		AD89172C1A892B3600AD5D54 /* EditProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD89172A1A892B3600AD5D54 /* EditProfileViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +44,32 @@
 		AD8916DC1A88F38700AD5D54 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AD8916DE1A88F38700AD5D54 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AD8916DF1A88F38700AD5D54 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		AD8916E11A88F38700AD5D54 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		AD8916E21A88F38700AD5D54 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		AD8916E51A88F38700AD5D54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AD8916E71A88F38700AD5D54 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AD8916EA1A88F38700AD5D54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		AD8916F01A88F38700AD5D54 /* PeakTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeakTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD8916F51A88F38700AD5D54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD8916F61A88F38700AD5D54 /* PeakTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PeakTests.m; sourceTree = "<group>"; };
+		AD89170A1A892A9E00AD5D54 /* LogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInViewController.h; sourceTree = "<group>"; };
+		AD89170B1A892A9E00AD5D54 /* LogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInViewController.m; sourceTree = "<group>"; };
+		AD89170C1A892A9E00AD5D54 /* LogInViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogInViewController.xib; sourceTree = "<group>"; };
+		AD89170F1A892AAB00AD5D54 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		AD8917101A892AAB00AD5D54 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		AD8917111A892AAB00AD5D54 /* SignUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
+		AD8917141A892ABC00AD5D54 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		AD8917151A892ABC00AD5D54 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		AD8917161A892ABC00AD5D54 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		AD8917191A892AC900AD5D54 /* PlaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceViewController.h; sourceTree = "<group>"; };
+		AD89171A1A892AC900AD5D54 /* PlaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceViewController.m; sourceTree = "<group>"; };
+		AD89171B1A892AC900AD5D54 /* PlaceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlaceViewController.xib; sourceTree = "<group>"; };
+		AD89171E1A892AD700AD5D54 /* CreatePlaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreatePlaceViewController.h; sourceTree = "<group>"; };
+		AD89171F1A892AD700AD5D54 /* CreatePlaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreatePlaceViewController.m; sourceTree = "<group>"; };
+		AD8917201A892AD700AD5D54 /* CreatePlaceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreatePlaceViewController.xib; sourceTree = "<group>"; };
+		AD8917231A892B2900AD5D54 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		AD8917241A892B2900AD5D54 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		AD8917251A892B2900AD5D54 /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		AD8917281A892B3600AD5D54 /* EditProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditProfileViewController.h; sourceTree = "<group>"; };
+		AD8917291A892B3600AD5D54 /* EditProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditProfileViewController.m; sourceTree = "<group>"; };
+		AD89172A1A892B3600AD5D54 /* EditProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditProfileViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,13 +111,8 @@
 		AD8916D91A88F38700AD5D54 /* Peak */ = {
 			isa = PBXGroup;
 			children = (
-				AD8916DE1A88F38700AD5D54 /* AppDelegate.h */,
-				AD8916DF1A88F38700AD5D54 /* AppDelegate.m */,
-				AD8916E11A88F38700AD5D54 /* ViewController.h */,
-				AD8916E21A88F38700AD5D54 /* ViewController.m */,
-				AD8916E41A88F38700AD5D54 /* Main.storyboard */,
-				AD8916E71A88F38700AD5D54 /* Images.xcassets */,
-				AD8916E91A88F38700AD5D54 /* LaunchScreen.xib */,
+				AD8917001A89298100AD5D54 /* Sources */,
+				AD89172D1A892B4C00AD5D54 /* Resources */,
 				AD8916DA1A88F38700AD5D54 /* Supporting Files */,
 			);
 			path = Peak;
@@ -117,6 +142,117 @@
 				AD8916F51A88F38700AD5D54 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AD8917001A89298100AD5D54 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				AD8917011A89298600AD5D54 /* Controllers */,
+				AD8916DE1A88F38700AD5D54 /* AppDelegate.h */,
+				AD8916DF1A88F38700AD5D54 /* AppDelegate.m */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		AD8917011A89298600AD5D54 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AD8917081A8929EF00AD5D54 /* Common */,
+				AD8917031A89299600AD5D54 /* LogIn */,
+				AD8917021A89298B00AD5D54 /* SignUp */,
+				AD8917041A8929A100AD5D54 /* Main */,
+				AD8917071A8929C900AD5D54 /* Place */,
+				AD8917091A892A3100AD5D54 /* Create Place */,
+				AD8917051A8929BC00AD5D54 /* Profile */,
+				AD8917061A8929C100AD5D54 /* Edit Profile */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		AD8917021A89298B00AD5D54 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				AD89170F1A892AAB00AD5D54 /* SignUpViewController.h */,
+				AD8917101A892AAB00AD5D54 /* SignUpViewController.m */,
+				AD8917111A892AAB00AD5D54 /* SignUpViewController.xib */,
+			);
+			name = SignUp;
+			sourceTree = "<group>";
+		};
+		AD8917031A89299600AD5D54 /* LogIn */ = {
+			isa = PBXGroup;
+			children = (
+				AD89170A1A892A9E00AD5D54 /* LogInViewController.h */,
+				AD89170B1A892A9E00AD5D54 /* LogInViewController.m */,
+				AD89170C1A892A9E00AD5D54 /* LogInViewController.xib */,
+			);
+			name = LogIn;
+			sourceTree = "<group>";
+		};
+		AD8917041A8929A100AD5D54 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				AD8917141A892ABC00AD5D54 /* MainViewController.h */,
+				AD8917151A892ABC00AD5D54 /* MainViewController.m */,
+				AD8917161A892ABC00AD5D54 /* MainViewController.xib */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		AD8917051A8929BC00AD5D54 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				AD8917231A892B2900AD5D54 /* ProfileViewController.h */,
+				AD8917241A892B2900AD5D54 /* ProfileViewController.m */,
+				AD8917251A892B2900AD5D54 /* ProfileViewController.xib */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
+		AD8917061A8929C100AD5D54 /* Edit Profile */ = {
+			isa = PBXGroup;
+			children = (
+				AD8917281A892B3600AD5D54 /* EditProfileViewController.h */,
+				AD8917291A892B3600AD5D54 /* EditProfileViewController.m */,
+				AD89172A1A892B3600AD5D54 /* EditProfileViewController.xib */,
+			);
+			name = "Edit Profile";
+			sourceTree = "<group>";
+		};
+		AD8917071A8929C900AD5D54 /* Place */ = {
+			isa = PBXGroup;
+			children = (
+				AD8917191A892AC900AD5D54 /* PlaceViewController.h */,
+				AD89171A1A892AC900AD5D54 /* PlaceViewController.m */,
+				AD89171B1A892AC900AD5D54 /* PlaceViewController.xib */,
+			);
+			name = Place;
+			sourceTree = "<group>";
+		};
+		AD8917081A8929EF00AD5D54 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		AD8917091A892A3100AD5D54 /* Create Place */ = {
+			isa = PBXGroup;
+			children = (
+				AD89171E1A892AD700AD5D54 /* CreatePlaceViewController.h */,
+				AD89171F1A892AD700AD5D54 /* CreatePlaceViewController.m */,
+				AD8917201A892AD700AD5D54 /* CreatePlaceViewController.xib */,
+			);
+			name = "Create Place";
+			sourceTree = "<group>";
+		};
+		AD89172D1A892B4C00AD5D54 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AD8916E71A88F38700AD5D54 /* Images.xcassets */,
+				AD8916E91A88F38700AD5D54 /* LaunchScreen.xib */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,8 +335,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD8916E61A88F38700AD5D54 /* Main.storyboard in Resources */,
+				AD8917271A892B2900AD5D54 /* ProfileViewController.xib in Resources */,
+				AD8917131A892AAB00AD5D54 /* SignUpViewController.xib in Resources */,
+				AD89172C1A892B3600AD5D54 /* EditProfileViewController.xib in Resources */,
+				AD89171D1A892AC900AD5D54 /* PlaceViewController.xib in Resources */,
+				AD8917181A892ABC00AD5D54 /* MainViewController.xib in Resources */,
+				AD89170E1A892A9E00AD5D54 /* LogInViewController.xib in Resources */,
 				AD8916EB1A88F38700AD5D54 /* LaunchScreen.xib in Resources */,
+				AD8917221A892AD700AD5D54 /* CreatePlaceViewController.xib in Resources */,
 				AD8916E81A88F38700AD5D54 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,8 +361,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD8916E31A88F38700AD5D54 /* ViewController.m in Sources */,
+				AD89170D1A892A9E00AD5D54 /* LogInViewController.m in Sources */,
+				AD8917261A892B2900AD5D54 /* ProfileViewController.m in Sources */,
+				AD89172B1A892B3600AD5D54 /* EditProfileViewController.m in Sources */,
+				AD8917171A892ABC00AD5D54 /* MainViewController.m in Sources */,
+				AD8917121A892AAB00AD5D54 /* SignUpViewController.m in Sources */,
+				AD89171C1A892AC900AD5D54 /* PlaceViewController.m in Sources */,
 				AD8916E01A88F38700AD5D54 /* AppDelegate.m in Sources */,
+				AD8917211A892AD700AD5D54 /* CreatePlaceViewController.m in Sources */,
 				AD8916DD1A88F38700AD5D54 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,14 +392,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		AD8916E41A88F38700AD5D54 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AD8916E51A88F38700AD5D54 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		AD8916E91A88F38700AD5D54 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -412,6 +552,7 @@
 				AD8916FC1A88F38700AD5D54 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AD8916FD1A88F38700AD5D54 /* Build configuration list for PBXNativeTarget "PeakTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +561,7 @@
 				AD8916FF1A88F38700AD5D54 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
