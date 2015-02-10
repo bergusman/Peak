@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD32AEC41A895211003E4037 /* UIColor+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = AD32AEC31A895211003E4037 /* UIColor+Helper.m */; };
+		AD32AEC71A895B43003E4037 /* login-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD32AEC61A895B43003E4037 /* login-bg@2x.png */; };
+		AD32AECD1A8966B3003E4037 /* UIImage+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = AD32AECC1A8966B3003E4037 /* UIImage+Helper.m */; };
+		AD32AED01A896745003E4037 /* UIFont+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = AD32AECF1A896745003E4037 /* UIFont+Helper.m */; };
+		AD32AED41A89697E003E4037 /* PlaceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD32AED21A89697E003E4037 /* PlaceCell.m */; };
+		AD32AED51A89697E003E4037 /* PlaceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD32AED31A89697E003E4037 /* PlaceCell.xib */; };
+		AD32AED91A89698E003E4037 /* CommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD32AED71A89698E003E4037 /* CommentCell.m */; };
+		AD32AEDA1A89698E003E4037 /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD32AED81A89698E003E4037 /* CommentCell.xib */; };
+		AD32AEDD1A896A1C003E4037 /* LoadingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD32AEDC1A896A1C003E4037 /* LoadingImageView.m */; };
+		AD32AEE21A896DBD003E4037 /* HeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD32AEE01A896DBD003E4037 /* HeaderCell.m */; };
+		AD32AEE31A896DBD003E4037 /* HeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD32AEE11A896DBD003E4037 /* HeaderCell.xib */; };
+		AD32AEE81A89725D003E4037 /* HorizontalSeparatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD32AEE51A89725D003E4037 /* HorizontalSeparatorView.m */; };
+		AD32AEE91A89725D003E4037 /* VerticalSeparatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD32AEE71A89725D003E4037 /* VerticalSeparatorView.m */; };
+		AD32AEEF1A898590003E4037 /* PlaceCardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD32AEED1A898590003E4037 /* PlaceCardCell.m */; };
+		AD32AEF01A898590003E4037 /* PlaceCardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD32AEEE1A898590003E4037 /* PlaceCardCell.xib */; };
 		AD8916DD1A88F38700AD5D54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8916DC1A88F38700AD5D54 /* main.m */; };
 		AD8916E01A88F38700AD5D54 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8916DF1A88F38700AD5D54 /* AppDelegate.m */; };
 		AD8916E81A88F38700AD5D54 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD8916E71A88F38700AD5D54 /* Images.xcassets */; };
@@ -26,6 +41,13 @@
 		AD8917271A892B2900AD5D54 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD8917251A892B2900AD5D54 /* ProfileViewController.xib */; };
 		AD89172B1A892B3600AD5D54 /* EditProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8917291A892B3600AD5D54 /* EditProfileViewController.m */; };
 		AD89172C1A892B3600AD5D54 /* EditProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD89172A1A892B3600AD5D54 /* EditProfileViewController.xib */; };
+		AD8917321A894F1A00AD5D54 /* TextField.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8917311A894F1A00AD5D54 /* TextField.m */; };
+		AD8917391A894F3A00AD5D54 /* DINPro-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = AD8917341A894F3A00AD5D54 /* DINPro-Black.otf */; };
+		AD89173A1A894F3A00AD5D54 /* DINPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = AD8917351A894F3A00AD5D54 /* DINPro-Bold.otf */; };
+		AD89173B1A894F3A00AD5D54 /* DINPro-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = AD8917361A894F3A00AD5D54 /* DINPro-Light.otf */; };
+		AD89173C1A894F3A00AD5D54 /* DINPro-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = AD8917371A894F3A00AD5D54 /* DINPro-Medium.otf */; };
+		AD89173D1A894F3A00AD5D54 /* DINPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = AD8917381A894F3A00AD5D54 /* DINPro-Regular.otf */; };
+		F01F8EBCEEB34F95BD3CEECE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B5F1C4D75314A05A4A71881 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +61,33 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4425F171182C49579D78CADD /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		7B5F1C4D75314A05A4A71881 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD32AEC21A895211003E4037 /* UIColor+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Helper.h"; sourceTree = "<group>"; };
+		AD32AEC31A895211003E4037 /* UIColor+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Helper.m"; sourceTree = "<group>"; };
+		AD32AEC61A895B43003E4037 /* login-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login-bg@2x.png"; sourceTree = "<group>"; };
+		AD32AECB1A8966B3003E4037 /* UIImage+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Helper.h"; sourceTree = "<group>"; };
+		AD32AECC1A8966B3003E4037 /* UIImage+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Helper.m"; sourceTree = "<group>"; };
+		AD32AECE1A896745003E4037 /* UIFont+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Helper.h"; sourceTree = "<group>"; };
+		AD32AECF1A896745003E4037 /* UIFont+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Helper.m"; sourceTree = "<group>"; };
+		AD32AED11A89697E003E4037 /* PlaceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceCell.h; sourceTree = "<group>"; };
+		AD32AED21A89697E003E4037 /* PlaceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceCell.m; sourceTree = "<group>"; };
+		AD32AED31A89697E003E4037 /* PlaceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlaceCell.xib; sourceTree = "<group>"; };
+		AD32AED61A89698E003E4037 /* CommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentCell.h; sourceTree = "<group>"; };
+		AD32AED71A89698E003E4037 /* CommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentCell.m; sourceTree = "<group>"; };
+		AD32AED81A89698E003E4037 /* CommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentCell.xib; sourceTree = "<group>"; };
+		AD32AEDB1A896A1C003E4037 /* LoadingImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingImageView.h; sourceTree = "<group>"; };
+		AD32AEDC1A896A1C003E4037 /* LoadingImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingImageView.m; sourceTree = "<group>"; };
+		AD32AEDF1A896DBD003E4037 /* HeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderCell.h; sourceTree = "<group>"; };
+		AD32AEE01A896DBD003E4037 /* HeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderCell.m; sourceTree = "<group>"; };
+		AD32AEE11A896DBD003E4037 /* HeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderCell.xib; sourceTree = "<group>"; };
+		AD32AEE41A89725D003E4037 /* HorizontalSeparatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizontalSeparatorView.h; sourceTree = "<group>"; };
+		AD32AEE51A89725D003E4037 /* HorizontalSeparatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizontalSeparatorView.m; sourceTree = "<group>"; };
+		AD32AEE61A89725D003E4037 /* VerticalSeparatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerticalSeparatorView.h; sourceTree = "<group>"; };
+		AD32AEE71A89725D003E4037 /* VerticalSeparatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerticalSeparatorView.m; sourceTree = "<group>"; };
+		AD32AEEC1A898590003E4037 /* PlaceCardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceCardCell.h; sourceTree = "<group>"; };
+		AD32AEED1A898590003E4037 /* PlaceCardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceCardCell.m; sourceTree = "<group>"; };
+		AD32AEEE1A898590003E4037 /* PlaceCardCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlaceCardCell.xib; sourceTree = "<group>"; };
 		AD8916D71A88F38700AD5D54 /* Peak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Peak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD8916DB1A88F38700AD5D54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD8916DC1A88F38700AD5D54 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -70,6 +119,13 @@
 		AD8917281A892B3600AD5D54 /* EditProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditProfileViewController.h; sourceTree = "<group>"; };
 		AD8917291A892B3600AD5D54 /* EditProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditProfileViewController.m; sourceTree = "<group>"; };
 		AD89172A1A892B3600AD5D54 /* EditProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditProfileViewController.xib; sourceTree = "<group>"; };
+		AD8917301A894F1A00AD5D54 /* TextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextField.h; sourceTree = "<group>"; };
+		AD8917311A894F1A00AD5D54 /* TextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextField.m; sourceTree = "<group>"; };
+		AD8917341A894F3A00AD5D54 /* DINPro-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINPro-Black.otf"; sourceTree = "<group>"; };
+		AD8917351A894F3A00AD5D54 /* DINPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINPro-Bold.otf"; sourceTree = "<group>"; };
+		AD8917361A894F3A00AD5D54 /* DINPro-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINPro-Light.otf"; sourceTree = "<group>"; };
+		AD8917371A894F3A00AD5D54 /* DINPro-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINPro-Medium.otf"; sourceTree = "<group>"; };
+		AD8917381A894F3A00AD5D54 /* DINPro-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINPro-Regular.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +133,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F01F8EBCEEB34F95BD3CEECE /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,12 +147,103 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		27B8761D62814B33845D2349 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7B5F1C4D75314A05A4A71881 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AD32AEC11A8951FA003E4037 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				AD32AECB1A8966B3003E4037 /* UIImage+Helper.h */,
+				AD32AECC1A8966B3003E4037 /* UIImage+Helper.m */,
+				AD32AEC21A895211003E4037 /* UIColor+Helper.h */,
+				AD32AEC31A895211003E4037 /* UIColor+Helper.m */,
+				AD32AECE1A896745003E4037 /* UIFont+Helper.h */,
+				AD32AECF1A896745003E4037 /* UIFont+Helper.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		AD32AEC51A895B38003E4037 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				AD32AEC61A895B43003E4037 /* login-bg@2x.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		AD32AEC81A8965F8003E4037 /* Header Cell */ = {
+			isa = PBXGroup;
+			children = (
+				AD32AEDF1A896DBD003E4037 /* HeaderCell.h */,
+				AD32AEE01A896DBD003E4037 /* HeaderCell.m */,
+				AD32AEE11A896DBD003E4037 /* HeaderCell.xib */,
+			);
+			name = "Header Cell";
+			sourceTree = "<group>";
+		};
+		AD32AEC91A896604003E4037 /* Comment Cell */ = {
+			isa = PBXGroup;
+			children = (
+				AD32AED61A89698E003E4037 /* CommentCell.h */,
+				AD32AED71A89698E003E4037 /* CommentCell.m */,
+				AD32AED81A89698E003E4037 /* CommentCell.xib */,
+			);
+			name = "Comment Cell";
+			sourceTree = "<group>";
+		};
+		AD32AECA1A89660A003E4037 /* Place Cell */ = {
+			isa = PBXGroup;
+			children = (
+				AD32AED11A89697E003E4037 /* PlaceCell.h */,
+				AD32AED21A89697E003E4037 /* PlaceCell.m */,
+				AD32AED31A89697E003E4037 /* PlaceCell.xib */,
+			);
+			name = "Place Cell";
+			sourceTree = "<group>";
+		};
+		AD32AEDE1A896A27003E4037 /* Loading Image View */ = {
+			isa = PBXGroup;
+			children = (
+				AD32AEDB1A896A1C003E4037 /* LoadingImageView.h */,
+				AD32AEDC1A896A1C003E4037 /* LoadingImageView.m */,
+			);
+			name = "Loading Image View";
+			sourceTree = "<group>";
+		};
+		AD32AEEA1A897260003E4037 /* Separators */ = {
+			isa = PBXGroup;
+			children = (
+				AD32AEE41A89725D003E4037 /* HorizontalSeparatorView.h */,
+				AD32AEE51A89725D003E4037 /* HorizontalSeparatorView.m */,
+				AD32AEE61A89725D003E4037 /* VerticalSeparatorView.h */,
+				AD32AEE71A89725D003E4037 /* VerticalSeparatorView.m */,
+			);
+			name = Separators;
+			sourceTree = "<group>";
+		};
+		AD32AEEB1A89842C003E4037 /* Place Card Cell */ = {
+			isa = PBXGroup;
+			children = (
+				AD32AEEC1A898590003E4037 /* PlaceCardCell.h */,
+				AD32AEED1A898590003E4037 /* PlaceCardCell.m */,
+				AD32AEEE1A898590003E4037 /* PlaceCardCell.xib */,
+			);
+			name = "Place Card Cell";
+			sourceTree = "<group>";
+		};
 		AD8916CE1A88F38700AD5D54 = {
 			isa = PBXGroup;
 			children = (
 				AD8916D91A88F38700AD5D54 /* Peak */,
 				AD8916F31A88F38700AD5D54 /* PeakTests */,
 				AD8916D81A88F38700AD5D54 /* Products */,
+				27B8761D62814B33845D2349 /* Frameworks */,
+				4425F171182C49579D78CADD /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -147,6 +295,7 @@
 		AD8917001A89298100AD5D54 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				AD32AEC11A8951FA003E4037 /* Helpers */,
 				AD8917011A89298600AD5D54 /* Controllers */,
 				AD8916DE1A88F38700AD5D54 /* AppDelegate.h */,
 				AD8916DF1A88F38700AD5D54 /* AppDelegate.m */,
@@ -192,6 +341,7 @@
 		AD8917041A8929A100AD5D54 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				AD32AEEB1A89842C003E4037 /* Place Card Cell */,
 				AD8917141A892ABC00AD5D54 /* MainViewController.h */,
 				AD8917151A892ABC00AD5D54 /* MainViewController.m */,
 				AD8917161A892ABC00AD5D54 /* MainViewController.xib */,
@@ -202,6 +352,9 @@
 		AD8917051A8929BC00AD5D54 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				AD32AECA1A89660A003E4037 /* Place Cell */,
+				AD32AEC91A896604003E4037 /* Comment Cell */,
+				AD32AEC81A8965F8003E4037 /* Header Cell */,
 				AD8917231A892B2900AD5D54 /* ProfileViewController.h */,
 				AD8917241A892B2900AD5D54 /* ProfileViewController.m */,
 				AD8917251A892B2900AD5D54 /* ProfileViewController.xib */,
@@ -232,6 +385,7 @@
 		AD8917081A8929EF00AD5D54 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				AD89172E1A894EC600AD5D54 /* Views */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -249,10 +403,43 @@
 		AD89172D1A892B4C00AD5D54 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				AD32AEC51A895B38003E4037 /* Images */,
+				AD8917331A894F2800AD5D54 /* Fonts */,
 				AD8916E71A88F38700AD5D54 /* Images.xcassets */,
 				AD8916E91A88F38700AD5D54 /* LaunchScreen.xib */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		AD89172E1A894EC600AD5D54 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AD32AEEA1A897260003E4037 /* Separators */,
+				AD32AEDE1A896A27003E4037 /* Loading Image View */,
+				AD89172F1A894ECB00AD5D54 /* Text Field */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		AD89172F1A894ECB00AD5D54 /* Text Field */ = {
+			isa = PBXGroup;
+			children = (
+				AD8917301A894F1A00AD5D54 /* TextField.h */,
+				AD8917311A894F1A00AD5D54 /* TextField.m */,
+			);
+			name = "Text Field";
+			sourceTree = "<group>";
+		};
+		AD8917331A894F2800AD5D54 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				AD8917341A894F3A00AD5D54 /* DINPro-Black.otf */,
+				AD8917351A894F3A00AD5D54 /* DINPro-Bold.otf */,
+				AD8917361A894F3A00AD5D54 /* DINPro-Light.otf */,
+				AD8917371A894F3A00AD5D54 /* DINPro-Medium.otf */,
+				AD8917381A894F3A00AD5D54 /* DINPro-Regular.otf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,9 +449,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AD8916FA1A88F38700AD5D54 /* Build configuration list for PBXNativeTarget "Peak" */;
 			buildPhases = (
+				F026EDA3303E4DD7BEEDF794 /* Check Pods Manifest.lock */,
 				AD8916D31A88F38700AD5D54 /* Sources */,
 				AD8916D41A88F38700AD5D54 /* Frameworks */,
 				AD8916D51A88F38700AD5D54 /* Resources */,
+				3DDB709380344937AFFA8BA3 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -335,14 +524,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD32AEF01A898590003E4037 /* PlaceCardCell.xib in Resources */,
+				AD89173A1A894F3A00AD5D54 /* DINPro-Bold.otf in Resources */,
 				AD8917271A892B2900AD5D54 /* ProfileViewController.xib in Resources */,
+				AD32AEC71A895B43003E4037 /* login-bg@2x.png in Resources */,
+				AD32AED51A89697E003E4037 /* PlaceCell.xib in Resources */,
 				AD8917131A892AAB00AD5D54 /* SignUpViewController.xib in Resources */,
 				AD89172C1A892B3600AD5D54 /* EditProfileViewController.xib in Resources */,
 				AD89171D1A892AC900AD5D54 /* PlaceViewController.xib in Resources */,
 				AD8917181A892ABC00AD5D54 /* MainViewController.xib in Resources */,
+				AD32AEDA1A89698E003E4037 /* CommentCell.xib in Resources */,
 				AD89170E1A892A9E00AD5D54 /* LogInViewController.xib in Resources */,
 				AD8916EB1A88F38700AD5D54 /* LaunchScreen.xib in Resources */,
+				AD89173C1A894F3A00AD5D54 /* DINPro-Medium.otf in Resources */,
+				AD89173B1A894F3A00AD5D54 /* DINPro-Light.otf in Resources */,
+				AD8917391A894F3A00AD5D54 /* DINPro-Black.otf in Resources */,
 				AD8917221A892AD700AD5D54 /* CreatePlaceViewController.xib in Resources */,
+				AD89173D1A894F3A00AD5D54 /* DINPro-Regular.otf in Resources */,
+				AD32AEE31A896DBD003E4037 /* HeaderCell.xib in Resources */,
 				AD8916E81A88F38700AD5D54 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,19 +555,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3DDB709380344937AFFA8BA3 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F026EDA3303E4DD7BEEDF794 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AD8916D31A88F38700AD5D54 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				AD89170D1A892A9E00AD5D54 /* LogInViewController.m in Sources */,
+				AD32AED41A89697E003E4037 /* PlaceCell.m in Sources */,
 				AD8917261A892B2900AD5D54 /* ProfileViewController.m in Sources */,
 				AD89172B1A892B3600AD5D54 /* EditProfileViewController.m in Sources */,
+				AD32AECD1A8966B3003E4037 /* UIImage+Helper.m in Sources */,
 				AD8917171A892ABC00AD5D54 /* MainViewController.m in Sources */,
+				AD32AED01A896745003E4037 /* UIFont+Helper.m in Sources */,
+				AD32AEC41A895211003E4037 /* UIColor+Helper.m in Sources */,
+				AD32AEE21A896DBD003E4037 /* HeaderCell.m in Sources */,
+				AD32AEEF1A898590003E4037 /* PlaceCardCell.m in Sources */,
 				AD8917121A892AAB00AD5D54 /* SignUpViewController.m in Sources */,
+				AD32AEDD1A896A1C003E4037 /* LoadingImageView.m in Sources */,
 				AD89171C1A892AC900AD5D54 /* PlaceViewController.m in Sources */,
+				AD32AEE91A89725D003E4037 /* VerticalSeparatorView.m in Sources */,
+				AD32AEE81A89725D003E4037 /* HorizontalSeparatorView.m in Sources */,
 				AD8916E01A88F38700AD5D54 /* AppDelegate.m in Sources */,
+				AD8917321A894F1A00AD5D54 /* TextField.m in Sources */,
 				AD8917211A892AD700AD5D54 /* CreatePlaceViewController.m in Sources */,
+				AD32AED91A89698E003E4037 /* CommentCell.m in Sources */,
 				AD8916DD1A88F38700AD5D54 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -481,6 +724,7 @@
 		};
 		AD8916FB1A88F38700AD5D54 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4425F171182C49579D78CADD /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Peak/Info.plist;
@@ -491,6 +735,7 @@
 		};
 		AD8916FC1A88F38700AD5D54 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4425F171182C49579D78CADD /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Peak/Info.plist;

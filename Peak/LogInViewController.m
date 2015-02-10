@@ -10,6 +10,9 @@
 
 #import "SignUpViewController.h"
 
+// TODO: move log in fields for keyboard
+// TODO: animate blue border of text fields
+
 @interface LogInViewController ()
 
 @end
@@ -17,6 +20,10 @@
 @implementation LogInViewController
 
 #pragma mark - Actions
+
+- (IBAction)tapAction:(id)sender {
+    [self.view endEditing:YES];
+}
 
 - (IBAction)logInButtonTouchUpInside:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -36,6 +43,10 @@
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     [self.view endEditing:YES];
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
 }
 
 @end

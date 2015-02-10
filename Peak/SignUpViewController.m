@@ -16,6 +16,10 @@
 
 #pragma mark - Actions
 
+- (IBAction)tapAction:(id)sender {
+    [self.view endEditing:YES];
+}
+
 - (IBAction)signUpButtonTouchUpInside:(id)sender {
     [self.view.window.rootViewController dismissViewControllerAnimated:YES completion:nil];
 }
@@ -33,6 +37,10 @@
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     [self.view endEditing:YES];
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
 }
 
 @end

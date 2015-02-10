@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14D72i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="164" id="KGk-i7-Jjw" customClass="CommentCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="164"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aj1-FJ-jUi" customClass="LoadingImageView">
+                        <rect key="frame" x="20" y="25" width="40" height="40"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="y9r-IS-eva">
+                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="7nE-Bb-aG1"/>
+                            <constraint firstAttribute="trailing" secondItem="y9r-IS-eva" secondAttribute="trailing" id="Uud-9U-pgk"/>
+                            <constraint firstItem="y9r-IS-eva" firstAttribute="top" secondItem="Aj1-FJ-jUi" secondAttribute="top" id="XwB-lc-42K"/>
+                            <constraint firstItem="y9r-IS-eva" firstAttribute="leading" secondItem="Aj1-FJ-jUi" secondAttribute="leading" id="aSA-9b-kqk"/>
+                            <constraint firstAttribute="bottom" secondItem="y9r-IS-eva" secondAttribute="bottom" id="mq5-7F-Q7B"/>
+                            <constraint firstAttribute="width" constant="40" id="x44-N8-62g"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outlet property="imageView" destination="y9r-IS-eva" id="ap0-IM-emd"/>
+                        </connections>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sasha Grey" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QZn-Gt-NzQ">
+                        <rect key="frame" x="70" y="26" width="230" height="19"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                        <color key="textColor" red="0.086274509803921567" green="0.56470588235294117" blue="0.76862745098039209" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15 min" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1RT-2D-A9Z">
+                        <rect key="frame" x="70" y="47" width="230" height="16.5"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                        <color key="textColor" red="0.71372549019607845" green="0.74509803921568629" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aCT-QF-LSW">
+                        <rect key="frame" x="20" y="74.5" width="280" height="65.5"/>
+                        <string key="text">Al pastor de America. People posted way too many food pics today-tempted me to make this. I shocked myself! I grilled the onions for a different flavor.</string>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                        <color key="textColor" red="0.49411764705882355" green="0.54117647058823526" blue="0.58823529411764708" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" red="0.94901960784313721" green="0.96078431372549022" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="Aj1-FJ-jUi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="25" id="4jW-90-Y6b"/>
+                    <constraint firstAttribute="trailing" secondItem="aCT-QF-LSW" secondAttribute="trailing" constant="20" id="Dxi-qF-VA9"/>
+                    <constraint firstAttribute="trailing" secondItem="QZn-Gt-NzQ" secondAttribute="trailing" constant="20" id="LP6-hp-67m"/>
+                    <constraint firstItem="aCT-QF-LSW" firstAttribute="top" secondItem="Aj1-FJ-jUi" secondAttribute="bottom" constant="10" id="LcX-LY-Bdw"/>
+                    <constraint firstItem="aCT-QF-LSW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="Mip-8k-BGK"/>
+                    <constraint firstItem="1RT-2D-A9Z" firstAttribute="top" secondItem="QZn-Gt-NzQ" secondAttribute="bottom" constant="2" id="Qc9-Zi-JC2"/>
+                    <constraint firstItem="QZn-Gt-NzQ" firstAttribute="leading" secondItem="Aj1-FJ-jUi" secondAttribute="trailing" constant="10" id="Tmm-ii-3rK"/>
+                    <constraint firstItem="QZn-Gt-NzQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="26" id="l4W-08-HW2"/>
+                    <constraint firstAttribute="trailing" secondItem="1RT-2D-A9Z" secondAttribute="trailing" constant="20" id="lIt-5y-F1D"/>
+                    <constraint firstItem="Aj1-FJ-jUi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="qcn-I4-IMc"/>
+                    <constraint firstItem="QZn-Gt-NzQ" firstAttribute="leading" secondItem="1RT-2D-A9Z" secondAttribute="leading" id="tAq-j2-ocI"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="avatarView" destination="Aj1-FJ-jUi" id="Lh6-bw-2gI"/>
+            </connections>
+            <point key="canvasLocation" x="374" y="242"/>
+        </tableViewCell>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

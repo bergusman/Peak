@@ -3,6 +3,15 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="DINPro-Regular.otf">
+            <string>DINPro-Regular</string>
+            <string>DINPro-Regular</string>
+            <string>DINPro-Regular</string>
+            <string>DINPro-Regular</string>
+            <string>DINPro-Regular</string>
+        </mutableArray>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LogInViewController">
             <connections>
@@ -14,36 +23,42 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LGY-dP-4ge">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login-bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="LGY-dP-4ge" userLabel="Background Image View">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <color key="backgroundColor" red="0.18431372549019609" green="0.20392156862745098" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log in" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vS5-qF-ml3" userLabel="Log In Label">
+                    <rect key="frame" x="138" y="125" width="98" height="46.5"/>
+                    <fontDescription key="fontDescription" name="DINPro-Regular" family="DINPro" pointSize="36"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RXm-kU-fzW">
-                    <rect key="frame" x="0.0" y="172" width="375" height="191"/>
+                    <rect key="frame" x="0.0" y="206.5" width="375" height="191"/>
                     <subviews>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VsV-eD-efC">
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VsV-eD-efC" userLabel="Email Text Field" customClass="TextField">
                             <rect key="frame" x="10" y="10" width="355" height="50"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="9b5-EW-5g7"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <fontDescription key="fontDescription" name="DINPro-Regular" family="DINPro" pointSize="16"/>
+                            <textInputTraits key="textInputTraits" keyboardType="emailAddress" keyboardAppearance="alert" returnKeyType="next"/>
                         </textField>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bnl-hz-luU">
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bnl-hz-luU" userLabel="Password Text Field" customClass="TextField">
                             <rect key="frame" x="10" y="67" width="355" height="50"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="OhI-Vv-EQS"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <fontDescription key="fontDescription" name="DINPro-Regular" family="DINPro" pointSize="16"/>
+                            <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="done" secureTextEntry="YES"/>
                         </textField>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0yM-Tz-2yY">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0yM-Tz-2yY" userLabel="Log in Button">
                             <rect key="frame" x="10" y="131" width="355" height="50"/>
                             <color key="backgroundColor" red="0.16862745098039217" green="0.59999999999999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="uVr-HE-KkZ"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <fontDescription key="fontDescription" name="DINPro-Regular" family="DINPro" pointSize="16"/>
                             <state key="normal" title="LOG IN">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -67,12 +82,13 @@
                         <constraint firstItem="VsV-eD-efC" firstAttribute="leading" secondItem="RXm-kU-fzW" secondAttribute="leading" constant="10" id="ny8-YP-Ap7"/>
                     </constraints>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fax-0s-R5Q">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fax-0s-R5Q" userLabel="Sign Up Button">
                     <rect key="frame" x="0.0" y="617" width="375" height="50"/>
                     <color key="backgroundColor" red="0.062745098039215685" green="0.078431372549019607" blue="0.094117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="S72-nL-LrI"/>
                     </constraints>
+                    <fontDescription key="fontDescription" name="DINPro-Regular" family="DINPro" pointSize="15"/>
                     <state key="normal" title="FIRST TIME IN PEAK?">
                         <color key="titleColor" red="0.71372549019607845" green="0.74509803921568629" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -81,32 +97,38 @@
                         <action selector="signUpButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="aqG-Xe-Wnc"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log in" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vS5-qF-ml3">
-                    <rect key="frame" x="139" y="105" width="97" height="43"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <nil key="highlightedColor"/>
-                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <gestureRecognizers/>
             <constraints>
-                <constraint firstItem="RXm-kU-fzW" firstAttribute="top" secondItem="vS5-qF-ml3" secondAttribute="bottom" constant="24" id="2TA-jj-84J"/>
+                <constraint firstItem="RXm-kU-fzW" firstAttribute="top" secondItem="vS5-qF-ml3" secondAttribute="bottom" constant="35" id="2TA-jj-84J"/>
                 <constraint firstItem="RXm-kU-fzW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="G2C-z4-D7l"/>
                 <constraint firstItem="LGY-dP-4ge" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="LPm-rb-7DD"/>
                 <constraint firstAttribute="trailing" secondItem="RXm-kU-fzW" secondAttribute="trailing" id="QWw-rW-90h"/>
                 <constraint firstItem="fax-0s-R5Q" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="RKP-Bm-5df"/>
                 <constraint firstAttribute="trailing" secondItem="fax-0s-R5Q" secondAttribute="trailing" id="TJQ-XG-FwE"/>
                 <constraint firstItem="LGY-dP-4ge" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="l6S-ac-A9l"/>
-                <constraint firstItem="vS5-qF-ml3" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="105" id="nLN-98-cEi"/>
+                <constraint firstItem="vS5-qF-ml3" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="125" id="nLN-98-cEi"/>
                 <constraint firstAttribute="trailing" secondItem="LGY-dP-4ge" secondAttribute="trailing" id="qKJ-Qi-Gdy"/>
                 <constraint firstAttribute="centerX" secondItem="vS5-qF-ml3" secondAttribute="centerX" id="sKX-wD-wmH"/>
                 <constraint firstAttribute="bottom" secondItem="LGY-dP-4ge" secondAttribute="bottom" id="uVI-ZA-4wI"/>
                 <constraint firstAttribute="bottom" secondItem="fax-0s-R5Q" secondAttribute="bottom" id="yFu-S5-EIk"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="YDa-uK-aE2" appends="YES" id="ccV-BE-qfW"/>
+            </connections>
             <point key="canvasLocation" x="365.5" y="374.5"/>
         </view>
+        <tapGestureRecognizer id="YDa-uK-aE2">
+            <connections>
+                <action selector="tapAction:" destination="-1" id="QjU-p5-VPZ"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
+    <resources>
+        <image name="login-bg.png" width="375" height="667"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

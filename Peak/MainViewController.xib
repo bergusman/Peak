@@ -3,9 +3,16 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="DINPro-Regular.otf">
+            <string>DINPro-Regular</string>
+        </mutableArray>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController">
             <connections>
+                <outlet property="collectionView" destination="7RK-K3-fjs" id="C6y-zo-Crj"/>
+                <outlet property="tableView" destination="ZOY-Fd-80T" id="NXy-He-bsI"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -13,9 +20,64 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ZOY-Fd-80T">
+                    <rect key="frame" x="0.0" y="322" width="375" height="345"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="zjz-LA-eM2"/>
+                        <outlet property="delegate" destination="-1" id="DZt-af-bjd"/>
+                    </connections>
+                </tableView>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="7RK-K3-fjs">
+                    <rect key="frame" x="0.0" y="42" width="375" height="280"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="280" id="72K-iT-P2L"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="40" minimumInteritemSpacing="40" id="9gd-Cb-yz6">
+                        <size key="itemSize" width="335" height="262"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="7N2-fy-Ube"/>
+                        <outlet property="delegate" destination="-1" id="2FH-0b-Np2"/>
+                    </connections>
+                </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b3r-QQ-qzZ">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="42"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SEARCH" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ebc-VX-2Gm">
+                            <rect key="frame" x="32" y="12" width="53.5" height="18"/>
+                            <fontDescription key="fontDescription" name="DINPro-Regular" family="DINPro" pointSize="14"/>
+                            <color key="textColor" red="0.42352941176470588" green="0.46666666666666667" blue="0.51372549019607838" alpha="0.67000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.090196078431372548" green="0.098039215686274508" blue="0.10196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="42" id="CxS-YP-KXd"/>
+                        <constraint firstAttribute="centerY" secondItem="ebc-VX-2Gm" secondAttribute="centerY" id="Uzj-4X-3xe"/>
+                        <constraint firstItem="ebc-VX-2Gm" firstAttribute="leading" secondItem="b3r-QQ-qzZ" secondAttribute="leading" constant="32" id="xHM-Oj-brK"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.16862745098039217" green="0.1803921568627451" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="b3r-QQ-qzZ" secondAttribute="trailing" id="7rS-al-hzy"/>
+                <constraint firstItem="ZOY-Fd-80T" firstAttribute="top" secondItem="7RK-K3-fjs" secondAttribute="bottom" id="OLR-Lu-n8r"/>
+                <constraint firstItem="b3r-QQ-qzZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="RT8-0g-Q1n"/>
+                <constraint firstItem="7RK-K3-fjs" firstAttribute="top" secondItem="b3r-QQ-qzZ" secondAttribute="bottom" id="S8p-Iz-hXV"/>
+                <constraint firstItem="b3r-QQ-qzZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="W0q-p6-lgO"/>
+                <constraint firstItem="ZOY-Fd-80T" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Zzo-Vi-5l5"/>
+                <constraint firstAttribute="trailing" secondItem="7RK-K3-fjs" secondAttribute="trailing" id="apS-K6-zrn"/>
+                <constraint firstAttribute="bottom" secondItem="ZOY-Fd-80T" secondAttribute="bottom" id="dlc-lH-s0a"/>
+                <constraint firstItem="7RK-K3-fjs" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="n2F-ih-J9t"/>
+                <constraint firstAttribute="trailing" secondItem="ZOY-Fd-80T" secondAttribute="trailing" id="yVB-jX-CZt"/>
+            </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-            <point key="canvasLocation" x="384" y="375"/>
+            <point key="canvasLocation" x="317.5" y="313.5"/>
         </view>
     </objects>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

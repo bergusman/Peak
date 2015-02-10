@@ -8,30 +8,73 @@
 
 #import "PlaceViewController.h"
 
-@interface PlaceViewController ()
+#import "CommentCell.h"
+#import "LoadingImageView.h"
+
+@interface PlaceViewController () <UITableViewDataSource, UITableViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) IBOutlet UIView *headerView;
+
+@property (weak, nonatomic) IBOutlet LoadingImageView *photoView;
+
+@property (weak, nonatomic) IBOutlet LoadingImageView *avatarView;
+
 
 @end
 
 @implementation PlaceViewController
 
+#pragma mark - Setups
+
+- (void)setupTableView {
+    [self.tableView registerNib:[CommentCell nib] forCellReuseIdentifier:@"cell"];
+    self.tableView.tableHeaderView = self.headerView;
+}
+
+#pragma mark - Content
+
+- (void)fill {
+    [self.photoView setImageWithURL:[NSURL URLWithString:@"http://travelnoire.com/wp-content/uploads/2014/12/o-NEW-YORK-CITY-WRITER-facebook-1050x700.jpg"]];
+    
+    [self.avatarView setImageWithURL:[NSURL URLWithString:@"http://graph.facebook.com/SashaGrey/picture?type=large"]];
+}
+
+#pragma mark - Actions
+
+- (IBAction)backAction:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+#pragma mark - UITableViewDataSource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 20;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    CommentCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    [cell fill];
+    return cell;
+}
+
+#pragma mark - UITableViewDelegate
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return [CommentCell height];
+}
+
+#pragma mark - UIViewController
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    [self setupTableView];
+    [self fill];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14D72i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="DINPro-Medium.otf">
+            <string>DINPro-Medium</string>
+            <string>DINPro-Medium</string>
+        </mutableArray>
+        <mutableArray key="DINPro-Regular.otf">
+            <string>DINPro-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PlaceCardCell">
+            <rect key="frame" x="0.0" y="0.0" width="336" height="262"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="336" height="262"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DuN-8H-V61" customClass="LoadingImageView">
+                        <rect key="frame" x="0.0" y="0.0" width="336" height="105"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GHy-hu-BT2">
+                                <rect key="frame" x="0.0" y="0.0" width="336" height="105"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GHy-hu-BT2" firstAttribute="top" secondItem="DuN-8H-V61" secondAttribute="top" id="0xH-rt-Xl5"/>
+                            <constraint firstAttribute="height" constant="105" id="29l-67-Ak0"/>
+                            <constraint firstAttribute="bottom" secondItem="GHy-hu-BT2" secondAttribute="bottom" id="dce-n3-28R"/>
+                            <constraint firstAttribute="trailing" secondItem="GHy-hu-BT2" secondAttribute="trailing" id="gvf-Bo-QUt"/>
+                            <constraint firstItem="GHy-hu-BT2" firstAttribute="leading" secondItem="DuN-8H-V61" secondAttribute="leading" id="paa-Yd-e3Z"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="imageView" destination="GHy-hu-BT2" id="96R-aA-imv"/>
+                        </connections>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VICTORIA CITY" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zye-3x-2C1">
+                        <rect key="frame" x="16" y="16" width="130" height="30"/>
+                        <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="30"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZbZ-uJ-4g3">
+                        <rect key="frame" x="0.0" y="220" width="336" height="42"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="MIc-Fi-195" customClass="HorizontalSeparatorView">
+                                <rect key="frame" x="0.0" y="0.0" width="336" height="1"/>
+                                <color key="backgroundColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dwq-3l-EcL">
+                                <rect key="frame" x="0.0" y="0.0" width="168" height="42"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hso-KE-DIH">
+                                        <rect key="frame" x="0.0" y="0.0" width="168" height="42"/>
+                                        <fontDescription key="fontDescription" name="DINPro-Medium" family="DINPro" pointSize="12"/>
+                                        <state key="normal" title="GET DIRECTION">
+                                            <color key="titleColor" red="0.53725490196078429" green="0.58823529411764708" blue="0.66274509803921566" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <view contentMode="scaleToFill" horizontalHuggingPriority="252" placeholderIntrinsicWidth="1" placeholderIntrinsicHeight="infinite" translatesAutoresizingMaskIntoConstraints="NO" id="sH5-LT-32f" customClass="VerticalSeparatorView">
+                                        <rect key="frame" x="167" y="-0.5" width="1" height="42.5"/>
+                                        <color key="backgroundColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="sH5-LT-32f" secondAttribute="trailing" id="9G0-oP-UFP"/>
+                                    <constraint firstAttribute="bottom" secondItem="hso-KE-DIH" secondAttribute="bottom" id="Bcz-5e-BFi"/>
+                                    <constraint firstAttribute="trailing" secondItem="hso-KE-DIH" secondAttribute="trailing" id="CR3-fb-LqR"/>
+                                    <constraint firstItem="hso-KE-DIH" firstAttribute="leading" secondItem="Dwq-3l-EcL" secondAttribute="leading" id="d5W-Jg-ReC"/>
+                                    <constraint firstItem="hso-KE-DIH" firstAttribute="top" secondItem="Dwq-3l-EcL" secondAttribute="top" id="ePt-f1-7J2"/>
+                                    <constraint firstAttribute="bottom" secondItem="sH5-LT-32f" secondAttribute="bottom" id="i7M-Dq-OB2"/>
+                                    <constraint firstItem="sH5-LT-32f" firstAttribute="top" secondItem="Dwq-3l-EcL" secondAttribute="top" id="nUo-dc-aVm"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9f9-1U-B0D">
+                                <rect key="frame" x="168" y="0.0" width="168" height="42"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yof-9v-bnb">
+                                        <rect key="frame" x="0.0" y="0.0" width="168" height="42"/>
+                                        <fontDescription key="fontDescription" name="DINPro-Medium" family="DINPro" pointSize="12"/>
+                                        <state key="normal" title="ADD TO FAVORITE">
+                                            <color key="titleColor" red="0.53725490196078429" green="0.58823529411764708" blue="0.66274509803921566" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="yof-9v-bnb" secondAttribute="trailing" id="Fpr-1G-5sS"/>
+                                    <constraint firstItem="yof-9v-bnb" firstAttribute="top" secondItem="9f9-1U-B0D" secondAttribute="top" id="Qee-rO-ARZ"/>
+                                    <constraint firstItem="yof-9v-bnb" firstAttribute="leading" secondItem="9f9-1U-B0D" secondAttribute="leading" id="cQk-PX-KiG"/>
+                                    <constraint firstAttribute="bottom" secondItem="yof-9v-bnb" secondAttribute="bottom" id="oQP-kL-dgx"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MIc-Fi-195" firstAttribute="leading" secondItem="ZbZ-uJ-4g3" secondAttribute="leading" id="18w-DN-yA9"/>
+                            <constraint firstItem="9f9-1U-B0D" firstAttribute="top" secondItem="ZbZ-uJ-4g3" secondAttribute="top" id="1v3-4c-f86"/>
+                            <constraint firstItem="9f9-1U-B0D" firstAttribute="leading" secondItem="Dwq-3l-EcL" secondAttribute="trailing" id="CzL-7b-c7C"/>
+                            <constraint firstAttribute="trailing" secondItem="MIc-Fi-195" secondAttribute="trailing" id="Dx3-dn-OR7"/>
+                            <constraint firstAttribute="bottom" secondItem="Dwq-3l-EcL" secondAttribute="bottom" id="HN6-jH-7d7"/>
+                            <constraint firstItem="9f9-1U-B0D" firstAttribute="width" secondItem="Dwq-3l-EcL" secondAttribute="width" id="Ig1-KI-kA8"/>
+                            <constraint firstAttribute="trailing" secondItem="9f9-1U-B0D" secondAttribute="trailing" id="TC8-LL-al5"/>
+                            <constraint firstItem="MIc-Fi-195" firstAttribute="top" secondItem="ZbZ-uJ-4g3" secondAttribute="top" id="W43-G7-c8n"/>
+                            <constraint firstItem="Dwq-3l-EcL" firstAttribute="leading" secondItem="ZbZ-uJ-4g3" secondAttribute="leading" id="ate-2q-W7c"/>
+                            <constraint firstAttribute="height" constant="42" id="mtQ-WC-8MV"/>
+                            <constraint firstItem="Dwq-3l-EcL" firstAttribute="top" secondItem="ZbZ-uJ-4g3" secondAttribute="top" id="qxm-1x-Mkq"/>
+                            <constraint firstAttribute="bottom" secondItem="9f9-1U-B0D" secondAttribute="bottom" id="yhx-YX-dEP"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Perfect place to realax with amazing view  of new york city wit" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nGz-jc-2e1">
+                        <rect key="frame" x="15" y="120" width="306" height="33.5"/>
+                        <fontDescription key="fontDescription" name="DINPro-Regular" family="DINPro" pointSize="13"/>
+                        <color key="textColor" red="0.63921568627450975" green="0.63921568627450975" blue="0.63921568627450975" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="nGz-jc-2e1" secondAttribute="trailing" constant="15" id="5qv-1K-syK"/>
+                <constraint firstAttribute="trailing" secondItem="ZbZ-uJ-4g3" secondAttribute="trailing" id="8Xq-0l-GLq"/>
+                <constraint firstItem="zye-3x-2C1" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="16" id="8jH-kf-gBj"/>
+                <constraint firstItem="zye-3x-2C1" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="Ozj-Vl-QlA"/>
+                <constraint firstAttribute="bottom" secondItem="ZbZ-uJ-4g3" secondAttribute="bottom" id="P0K-0E-wla"/>
+                <constraint firstItem="ZbZ-uJ-4g3" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="T6h-iX-WMf"/>
+                <constraint firstItem="DuN-8H-V61" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="c04-B9-Red"/>
+                <constraint firstAttribute="trailing" secondItem="DuN-8H-V61" secondAttribute="trailing" id="ct2-8s-uYB"/>
+                <constraint firstItem="DuN-8H-V61" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="djz-2P-xvH"/>
+                <constraint firstItem="nGz-jc-2e1" firstAttribute="top" secondItem="DuN-8H-V61" secondAttribute="bottom" constant="15" id="lZG-nm-oDd"/>
+                <constraint firstItem="nGz-jc-2e1" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="xBF-en-IWu"/>
+            </constraints>
+            <size key="customSize" width="224" height="132"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <integer key="value" value="6"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="photoView" destination="DuN-8H-V61" id="4Nd-M0-eYz"/>
+            </connections>
+            <point key="canvasLocation" x="449" y="375"/>
+        </collectionViewCell>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
