@@ -8,30 +8,38 @@
 
 #import "CreatePlaceViewController.h"
 
+#import "UIFont+Helper.h"
+#import "UIColor+Helper.h"
+
 @interface CreatePlaceViewController ()
 
 @end
 
 @implementation CreatePlaceViewController
 
+#pragma mark - Setups
+
+- (void)setupNavigationItem {
+    self.navigationItem.title = @"ADD NEW PLACE";
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelAction:)];
+    
+    self.navigationController.navigationBar.tintColor = RGB(86, 92, 100);
+    
+    id attributes = @{NSFontAttributeName: [UIFont dinproBoldFontWithSize:14]};
+    [self.navigationController.navigationBar setTitleTextAttributes:attributes];
+}
+
+#pragma mark - Actions
+
+- (void)cancelAction:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - UIViewController
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    [self setupNavigationItem];
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

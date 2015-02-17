@@ -47,6 +47,14 @@
 		AD89173B1A894F3A00AD5D54 /* DINPro-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = AD8917361A894F3A00AD5D54 /* DINPro-Light.otf */; };
 		AD89173C1A894F3A00AD5D54 /* DINPro-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = AD8917371A894F3A00AD5D54 /* DINPro-Medium.otf */; };
 		AD89173D1A894F3A00AD5D54 /* DINPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = AD8917381A894F3A00AD5D54 /* DINPro-Regular.otf */; };
+		ADD8E72C1A92F204003AFCDE /* FilterButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD8E72B1A92F204003AFCDE /* FilterButtonView.m */; };
+		ADD8E7301A92FE0C003AFCDE /* LightRadarView.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD8E72F1A92FE0C003AFCDE /* LightRadarView.m */; };
+		ADD8E7321A92FE62003AFCDE /* radar-light@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADD8E7311A92FE62003AFCDE /* radar-light@2x.png */; };
+		ADD8E7341A93004C003AFCDE /* radar-dark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADD8E7331A93004C003AFCDE /* radar-dark@2x.png */; };
+		ADD8E7381A9302AD003AFCDE /* RateView.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD8E7371A9302AD003AFCDE /* RateView.m */; };
+		ADD8E73A1A930312003AFCDE /* rate@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADD8E7391A930312003AFCDE /* rate@2x.png */; };
+		ADD8E73F1A9303C0003AFCDE /* PhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD8E73D1A9303C0003AFCDE /* PhotoCell.m */; };
+		ADD8E7401A9303C0003AFCDE /* PhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADD8E73E1A9303C0003AFCDE /* PhotoCell.xib */; };
 		F01F8EBCEEB34F95BD3CEECE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B5F1C4D75314A05A4A71881 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -61,8 +69,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4425F171182C49579D78CADD /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		0EF5CF6BE06A13B8755B7DD9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		7B5F1C4D75314A05A4A71881 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D2297CCC32E726A8DAF6347 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		AD32AEC21A895211003E4037 /* UIColor+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Helper.h"; sourceTree = "<group>"; };
 		AD32AEC31A895211003E4037 /* UIColor+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Helper.m"; sourceTree = "<group>"; };
 		AD32AEC61A895B43003E4037 /* login-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login-bg@2x.png"; sourceTree = "<group>"; };
@@ -126,6 +135,18 @@
 		AD8917361A894F3A00AD5D54 /* DINPro-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINPro-Light.otf"; sourceTree = "<group>"; };
 		AD8917371A894F3A00AD5D54 /* DINPro-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINPro-Medium.otf"; sourceTree = "<group>"; };
 		AD8917381A894F3A00AD5D54 /* DINPro-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINPro-Regular.otf"; sourceTree = "<group>"; };
+		ADD8E72A1A92F204003AFCDE /* FilterButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterButtonView.h; sourceTree = "<group>"; };
+		ADD8E72B1A92F204003AFCDE /* FilterButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterButtonView.m; sourceTree = "<group>"; };
+		ADD8E72E1A92FE0C003AFCDE /* LightRadarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LightRadarView.h; sourceTree = "<group>"; };
+		ADD8E72F1A92FE0C003AFCDE /* LightRadarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LightRadarView.m; sourceTree = "<group>"; };
+		ADD8E7311A92FE62003AFCDE /* radar-light@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "radar-light@2x.png"; sourceTree = "<group>"; };
+		ADD8E7331A93004C003AFCDE /* radar-dark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "radar-dark@2x.png"; sourceTree = "<group>"; };
+		ADD8E7361A9302AD003AFCDE /* RateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RateView.h; sourceTree = "<group>"; };
+		ADD8E7371A9302AD003AFCDE /* RateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RateView.m; sourceTree = "<group>"; };
+		ADD8E7391A930312003AFCDE /* rate@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rate@2x.png"; sourceTree = "<group>"; };
+		ADD8E73C1A9303C0003AFCDE /* PhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCell.h; sourceTree = "<group>"; };
+		ADD8E73D1A9303C0003AFCDE /* PhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCell.m; sourceTree = "<group>"; };
+		ADD8E73E1A9303C0003AFCDE /* PhotoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,7 +264,7 @@
 				AD8916F31A88F38700AD5D54 /* PeakTests */,
 				AD8916D81A88F38700AD5D54 /* Products */,
 				27B8761D62814B33845D2349 /* Frameworks */,
-				4425F171182C49579D78CADD /* Pods.xcconfig */,
+				B9756348C8557DA29AD2A06D /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -341,6 +362,8 @@
 		AD8917041A8929A100AD5D54 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				ADD8E72D1A92FDF6003AFCDE /* Radar */,
+				ADD8E7291A92F1E0003AFCDE /* Filter Button */,
 				AD32AEEB1A89842C003E4037 /* Place Card Cell */,
 				AD8917141A892ABC00AD5D54 /* MainViewController.h */,
 				AD8917151A892ABC00AD5D54 /* MainViewController.m */,
@@ -375,6 +398,8 @@
 		AD8917071A8929C900AD5D54 /* Place */ = {
 			isa = PBXGroup;
 			children = (
+				ADD8E73B1A9303A6003AFCDE /* Photo */,
+				ADD8E7351A9302A1003AFCDE /* Rate */,
 				AD8917191A892AC900AD5D54 /* PlaceViewController.h */,
 				AD89171A1A892AC900AD5D54 /* PlaceViewController.m */,
 				AD89171B1A892AC900AD5D54 /* PlaceViewController.xib */,
@@ -440,6 +465,55 @@
 				AD8917381A894F3A00AD5D54 /* DINPro-Regular.otf */,
 			);
 			name = Fonts;
+			sourceTree = "<group>";
+		};
+		ADD8E7291A92F1E0003AFCDE /* Filter Button */ = {
+			isa = PBXGroup;
+			children = (
+				ADD8E72A1A92F204003AFCDE /* FilterButtonView.h */,
+				ADD8E72B1A92F204003AFCDE /* FilterButtonView.m */,
+			);
+			name = "Filter Button";
+			sourceTree = "<group>";
+		};
+		ADD8E72D1A92FDF6003AFCDE /* Radar */ = {
+			isa = PBXGroup;
+			children = (
+				ADD8E7311A92FE62003AFCDE /* radar-light@2x.png */,
+				ADD8E7331A93004C003AFCDE /* radar-dark@2x.png */,
+				ADD8E72E1A92FE0C003AFCDE /* LightRadarView.h */,
+				ADD8E72F1A92FE0C003AFCDE /* LightRadarView.m */,
+			);
+			name = Radar;
+			sourceTree = "<group>";
+		};
+		ADD8E7351A9302A1003AFCDE /* Rate */ = {
+			isa = PBXGroup;
+			children = (
+				ADD8E7391A930312003AFCDE /* rate@2x.png */,
+				ADD8E7361A9302AD003AFCDE /* RateView.h */,
+				ADD8E7371A9302AD003AFCDE /* RateView.m */,
+			);
+			name = Rate;
+			sourceTree = "<group>";
+		};
+		ADD8E73B1A9303A6003AFCDE /* Photo */ = {
+			isa = PBXGroup;
+			children = (
+				ADD8E73C1A9303C0003AFCDE /* PhotoCell.h */,
+				ADD8E73D1A9303C0003AFCDE /* PhotoCell.m */,
+				ADD8E73E1A9303C0003AFCDE /* PhotoCell.xib */,
+			);
+			name = Photo;
+			sourceTree = "<group>";
+		};
+		B9756348C8557DA29AD2A06D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9D2297CCC32E726A8DAF6347 /* Pods.debug.xcconfig */,
+				0EF5CF6BE06A13B8755B7DD9 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -539,9 +613,13 @@
 				AD89173C1A894F3A00AD5D54 /* DINPro-Medium.otf in Resources */,
 				AD89173B1A894F3A00AD5D54 /* DINPro-Light.otf in Resources */,
 				AD8917391A894F3A00AD5D54 /* DINPro-Black.otf in Resources */,
+				ADD8E7341A93004C003AFCDE /* radar-dark@2x.png in Resources */,
 				AD8917221A892AD700AD5D54 /* CreatePlaceViewController.xib in Resources */,
 				AD89173D1A894F3A00AD5D54 /* DINPro-Regular.otf in Resources */,
+				ADD8E7401A9303C0003AFCDE /* PhotoCell.xib in Resources */,
 				AD32AEE31A896DBD003E4037 /* HeaderCell.xib in Resources */,
+				ADD8E7321A92FE62003AFCDE /* radar-light@2x.png in Resources */,
+				ADD8E73A1A930312003AFCDE /* rate@2x.png in Resources */,
 				AD8916E81A88F38700AD5D54 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -568,7 +646,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F026EDA3303E4DD7BEEDF794 /* Check Pods Manifest.lock */ = {
@@ -593,8 +671,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADD8E73F1A9303C0003AFCDE /* PhotoCell.m in Sources */,
 				AD89170D1A892A9E00AD5D54 /* LogInViewController.m in Sources */,
 				AD32AED41A89697E003E4037 /* PlaceCell.m in Sources */,
+				ADD8E72C1A92F204003AFCDE /* FilterButtonView.m in Sources */,
 				AD8917261A892B2900AD5D54 /* ProfileViewController.m in Sources */,
 				AD89172B1A892B3600AD5D54 /* EditProfileViewController.m in Sources */,
 				AD32AECD1A8966B3003E4037 /* UIImage+Helper.m in Sources */,
@@ -603,6 +683,7 @@
 				AD32AEC41A895211003E4037 /* UIColor+Helper.m in Sources */,
 				AD32AEE21A896DBD003E4037 /* HeaderCell.m in Sources */,
 				AD32AEEF1A898590003E4037 /* PlaceCardCell.m in Sources */,
+				ADD8E7381A9302AD003AFCDE /* RateView.m in Sources */,
 				AD8917121A892AAB00AD5D54 /* SignUpViewController.m in Sources */,
 				AD32AEDD1A896A1C003E4037 /* LoadingImageView.m in Sources */,
 				AD89171C1A892AC900AD5D54 /* PlaceViewController.m in Sources */,
@@ -610,6 +691,7 @@
 				AD32AEE81A89725D003E4037 /* HorizontalSeparatorView.m in Sources */,
 				AD8916E01A88F38700AD5D54 /* AppDelegate.m in Sources */,
 				AD8917321A894F1A00AD5D54 /* TextField.m in Sources */,
+				ADD8E7301A92FE0C003AFCDE /* LightRadarView.m in Sources */,
 				AD8917211A892AD700AD5D54 /* CreatePlaceViewController.m in Sources */,
 				AD32AED91A89698E003E4037 /* CommentCell.m in Sources */,
 				AD8916DD1A88F38700AD5D54 /* main.m in Sources */,
@@ -724,9 +806,10 @@
 		};
 		AD8916FB1A88F38700AD5D54 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4425F171182C49579D78CADD /* Pods.xcconfig */;
+			baseConfigurationReference = 9D2297CCC32E726A8DAF6347 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_RESOURCE_RULES_PATH = "$(SDKROOT)/ResourceRules.plist";
 				INFOPLIST_FILE = Peak/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -735,9 +818,10 @@
 		};
 		AD8916FC1A88F38700AD5D54 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4425F171182C49579D78CADD /* Pods.xcconfig */;
+			baseConfigurationReference = 0EF5CF6BE06A13B8755B7DD9 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_RESOURCE_RULES_PATH = "$(SDKROOT)/ResourceRules.plist";
 				INFOPLIST_FILE = Peak/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

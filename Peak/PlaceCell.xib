@@ -23,13 +23,13 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NIGHT BAR" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oCB-za-ozs">
-                        <rect key="frame" x="79" y="17" width="221" height="15.5"/>
+                        <rect key="frame" x="79" y="17" width="181" height="15.5"/>
                         <fontDescription key="fontDescription" name="DINPro-Bold" family="DINPro" pointSize="12"/>
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2-AVENUE 34, NEW YORK US" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mhk-yr-qfR">
-                        <rect key="frame" x="79" y="34" width="220.5" height="13"/>
+                        <rect key="frame" x="79" y="34" width="181" height="13"/>
                         <fontDescription key="fontDescription" name="DINPro-Regular" family="DINPro" pointSize="10"/>
                         <color key="textColor" red="1" green="1" blue="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -50,30 +50,38 @@
                         <rect key="frame" x="0.0" y="66.5" width="320" height="1"/>
                         <color key="backgroundColor" red="0.1803921568627451" green="0.18823529411764706" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="radar-dark.png" translatesAutoresizingMaskIntoConstraints="NO" id="l3Z-AF-CyU">
+                        <rect key="frame" x="260" y="9" width="50" height="50"/>
+                    </imageView>
                 </subviews>
                 <color key="backgroundColor" red="0.078431372549019607" green="0.098039215686274508" blue="0.11764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
                     <constraint firstItem="oCB-za-ozs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="17" id="2Uc-je-aeb"/>
                     <constraint firstAttribute="trailing" secondItem="dyz-FJ-dX7" secondAttribute="trailing" id="4kn-gj-DvZ"/>
                     <constraint firstItem="Mhk-yr-qfR" firstAttribute="top" secondItem="oCB-za-ozs" secondAttribute="bottom" constant="2" id="6ri-yt-Sw2"/>
+                    <constraint firstAttribute="trailing" secondItem="l3Z-AF-CyU" secondAttribute="trailing" constant="10" id="D0p-r5-ler"/>
                     <constraint firstItem="FKJ-D6-woH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="68" id="E90-eW-6VR"/>
                     <constraint firstItem="Fhf-2x-y1N" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="ObO-uk-1Vj"/>
+                    <constraint firstItem="l3Z-AF-CyU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="9" id="TXR-6a-ura"/>
                     <constraint firstAttribute="bottom" secondItem="dyz-FJ-dX7" secondAttribute="bottom" id="UV7-gj-68g"/>
                     <constraint firstItem="Fhf-2x-y1N" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="dK8-nc-B3p"/>
                     <constraint firstAttribute="bottom" secondItem="Fhf-2x-y1N" secondAttribute="bottom" constant="10" id="duT-YN-xXg"/>
                     <constraint firstItem="Mhk-yr-qfR" firstAttribute="leading" secondItem="FKJ-D6-woH" secondAttribute="trailing" constant="10" id="fjD-Ql-15t"/>
                     <constraint firstItem="FKJ-D6-woH" firstAttribute="leading" secondItem="Fhf-2x-y1N" secondAttribute="trailing" constant="10" id="h5E-pd-KZJ"/>
                     <constraint firstItem="dyz-FJ-dX7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="kRv-bX-maI"/>
-                    <constraint firstAttribute="trailing" secondItem="Mhk-yr-qfR" secondAttribute="trailing" constant="20" id="qLX-VP-cjn"/>
+                    <constraint firstAttribute="trailing" secondItem="Mhk-yr-qfR" secondAttribute="trailing" constant="60" id="qLX-VP-cjn"/>
                     <constraint firstAttribute="bottom" secondItem="FKJ-D6-woH" secondAttribute="bottom" constant="12" id="tAU-O7-nhL"/>
                     <constraint firstItem="oCB-za-ozs" firstAttribute="leading" secondItem="FKJ-D6-woH" secondAttribute="trailing" constant="10" id="uu6-RY-t8w"/>
-                    <constraint firstAttribute="trailing" secondItem="oCB-za-ozs" secondAttribute="trailing" constant="20" id="zAe-iz-UR8"/>
+                    <constraint firstAttribute="trailing" secondItem="oCB-za-ozs" secondAttribute="trailing" constant="60" id="zAe-iz-UR8"/>
                     <constraint firstItem="FKJ-D6-woH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="zlZ-6M-1lA"/>
                 </constraints>
             </tableViewCellContentView>
             <point key="canvasLocation" x="362" y="326"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="radar-dark.png" width="50" height="50"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

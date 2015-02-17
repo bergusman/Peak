@@ -14,6 +14,8 @@
 #import "UIColor+Helper.h"
 #import "UIImage+Helper.h"
 
+#import <Mapbox-iOS-SDK/Mapbox.h>
+
 @interface AppDelegate ()
 
 @end
@@ -21,6 +23,8 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [[RMConfiguration sharedInstance] setAccessToken:@"pk.eyJ1IjoiYmVyZ3VzbWFuIiwiYSI6IkozeVpWeTQifQ.w6OQ2fChXwExxGTWn5nmNg"];
+    
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     [self.window makeKeyAndVisible];
     
@@ -35,8 +39,6 @@
     
     LogInViewController *logInVC = [[LogInViewController alloc] init];
     [mainNC presentViewController:logInVC animated:NO completion:nil];
-    
-    //http://graph.facebook.com/SashaGrey/picture?type=large
     
     return YES;
 }

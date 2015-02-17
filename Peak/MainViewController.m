@@ -17,9 +17,18 @@
 
 #import "UIFont+Helper.h"
 #import "UIColor+Helper.h"
+#import "UIImage+Helper.h"
+
+#import <Mapbox-iOS-SDK/Mapbox.h>
 
 @interface MainViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UITableViewDataSource, UITableViewDelegate>
 
+@property (weak, nonatomic) IBOutlet UITextField *searchTextField;
+
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIView *contentView;
+
+@property (weak, nonatomic) IBOutlet RMMapView *mapView;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
@@ -41,6 +50,40 @@
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(profileAction:)];
 }
 
+- (void)setupScrollView {
+    NSLayoutConstraint *topConstraint = [NSLayoutConstraint constraintWithItem:self.contentView
+                                                                      attribute:NSLayoutAttributeTop
+                                                                      relatedBy:0
+                                                                         toItem:self.view
+                                                                      attribute:NSLayoutAttributeTop
+                                                                     multiplier:1.0
+                                                                       constant:42];
+    [self.view addConstraint:topConstraint];
+    
+    NSLayoutConstraint *bottomConstraint = [NSLayoutConstraint constraintWithItem:self.contentView
+                                                                       attribute:NSLayoutAttributeBottom
+                                                                       relatedBy:0
+                                                                          toItem:self.view
+                                                                       attribute:NSLayoutAttributeBottom
+                                                                      multiplier:1.0
+                                                                        constant:0];
+    [self.view addConstraint:bottomConstraint];
+    
+    NSLayoutConstraint *witdhConstraint = [NSLayoutConstraint constraintWithItem:self.contentView
+                                                                        attribute:NSLayoutAttributeWidth
+                                                                        relatedBy:0
+                                                                           toItem:self.view
+                                                                        attribute:NSLayoutAttributeWidth
+                                                                       multiplier:2.0
+                                                                         constant:0];
+    [self.view addConstraint:witdhConstraint];
+}
+
+- (void)setupMapView {
+    RMMapboxSource *tileSource = [[RMMapboxSource alloc] initWithMapID:@"bergusman.l67hk6bp"];
+    [self.mapView addTileSource:tileSource];
+}
+
 - (void)setupCollectionView {
     [self.collectionView registerNib:[PlaceCardCell nib] forCellWithReuseIdentifier:@"cell"];
 }
@@ -49,14 +92,26 @@
     [self.tableView registerNib:[PlaceCell nib] forCellReuseIdentifier:@"cell"];
 }
 
+- (void)setupSearch {
+    id attributes = @{NSFontAttributeName: self.searchTextField.font, NSForegroundColorAttributeName: self.searchTextField.textColor};
+    self.searchTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:self.searchTextField.placeholder attributes:attributes];}
+
 #pragma mark - Content
 
 
 #pragma mark - Actions
 
 - (void)addAction:(id)sender {
-    //CreatePlaceViewController *placeVC = [[CreatePlaceViewController alloc] init];
-    //[self presentViewController:placeVC animated:YES completion:nil];
+    CreatePlaceViewController *placeVC = [[CreatePlaceViewController alloc] init];
+    UINavigationController *placeNC = [[UINavigationController alloc] initWithRootViewController:placeVC];
+    
+    [placeNC.navigationBar setBackgroundImage:[UIImage imageWithSize:CGSizeMake(1, 64) color:RGB(40, 44, 48)] forBarMetrics:UIBarMetricsDefault];
+    //[mainNC.navigationBar setShadowImage:[UIImage imageWithSize:CGSizeMake(320, 1) color:RGB(54, 254, 154)]];
+    
+    placeNC.navigationBar.barStyle = UIBarStyleBlack;
+    
+    
+    [self presentViewController:placeNC animated:YES completion:nil];
 }
 
 - (void)profileAction:(id)sender {
@@ -107,13 +162,28 @@
     [self.navigationController pushViewController:placeVC animated:YES];
 }
 
+#pragma mark - UITextFieldDelegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [self.view endEditing:YES];
+    return YES;
+}
+
 #pragma mark - UIViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     [self setupNavigationItem];
+    [self setupSearch];
+    [self setupScrollView];
+    [self setupMapView];
     [self setupCollectionView];
     [self setupTableView];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.05 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.mapView setZoom:13 atCoordinate:CLLocationCoordinate2DMake(40.746764, -73.990667) animated:NO];
+    });
 }
 
 - (void)viewWillAppear:(BOOL)animated {

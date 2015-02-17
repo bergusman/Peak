@@ -7,8 +7,10 @@
         <mutableArray key="DINPro-Medium.otf">
             <string>DINPro-Medium</string>
             <string>DINPro-Medium</string>
+            <string>DINPro-Medium</string>
         </mutableArray>
         <mutableArray key="DINPro-Regular.otf">
+            <string>DINPro-Regular</string>
             <string>DINPro-Regular</string>
         </mutableArray>
     </customFonts>
@@ -64,8 +66,8 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
-                                    <view contentMode="scaleToFill" horizontalHuggingPriority="252" placeholderIntrinsicWidth="1" placeholderIntrinsicHeight="infinite" translatesAutoresizingMaskIntoConstraints="NO" id="sH5-LT-32f" customClass="VerticalSeparatorView">
-                                        <rect key="frame" x="167" y="-0.5" width="1" height="42.5"/>
+                                    <view contentMode="scaleToFill" horizontalHuggingPriority="252" misplaced="YES" placeholderIntrinsicWidth="1" placeholderIntrinsicHeight="infinite" translatesAutoresizingMaskIntoConstraints="NO" id="sH5-LT-32f" customClass="VerticalSeparatorView">
+                                        <rect key="frame" x="167" y="-1" width="1" height="42.5"/>
                                         <color key="backgroundColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
                                 </subviews>
@@ -118,26 +120,49 @@
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Perfect place to realax with amazing view  of new york city wit" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nGz-jc-2e1">
-                        <rect key="frame" x="15" y="120" width="306" height="33.5"/>
+                        <rect key="frame" x="15" y="120" width="251" height="33.5"/>
                         <fontDescription key="fontDescription" name="DINPro-Regular" family="DINPro" pointSize="13"/>
                         <color key="textColor" red="0.63921568627450975" green="0.63921568627450975" blue="0.63921568627450975" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOURS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iku-WH-O4a">
+                        <rect key="frame" x="15" y="157" width="39.5" height="15.5"/>
+                        <fontDescription key="fontDescription" name="DINPro-Medium" family="DINPro" pointSize="12"/>
+                        <color key="textColor" red="0.17254901960784313" green="0.61176470588235299" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AV6-6I-lgH">
+                        <rect key="frame" x="15" y="176.5" width="189.5" height="31"/>
+                        <string key="text">TUE-SUN 11:00 - 18:00
+TUE-SUN 13:00 - 22:00 (30.01.2016)</string>
+                        <fontDescription key="fontDescription" name="DINPro-Regular" family="DINPro" pointSize="12"/>
+                        <color key="textColor" red="0.63921568630000003" green="0.63921568630000003" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="radar-light.png" translatesAutoresizingMaskIntoConstraints="NO" id="M08-cW-jrt">
+                        <rect key="frame" x="277" y="115" width="50" height="50"/>
+                    </imageView>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
             <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="nGz-jc-2e1" secondAttribute="trailing" constant="15" id="5qv-1K-syK"/>
+                <constraint firstAttribute="trailing" secondItem="nGz-jc-2e1" secondAttribute="trailing" constant="70" id="5qv-1K-syK"/>
                 <constraint firstAttribute="trailing" secondItem="ZbZ-uJ-4g3" secondAttribute="trailing" id="8Xq-0l-GLq"/>
                 <constraint firstItem="zye-3x-2C1" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="16" id="8jH-kf-gBj"/>
+                <constraint firstItem="Iku-WH-O4a" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="O6d-mI-BC5"/>
                 <constraint firstItem="zye-3x-2C1" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="Ozj-Vl-QlA"/>
                 <constraint firstAttribute="bottom" secondItem="ZbZ-uJ-4g3" secondAttribute="bottom" id="P0K-0E-wla"/>
                 <constraint firstItem="ZbZ-uJ-4g3" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="T6h-iX-WMf"/>
+                <constraint firstItem="AV6-6I-lgH" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="UCK-Sh-Sb7"/>
                 <constraint firstItem="DuN-8H-V61" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="c04-B9-Red"/>
+                <constraint firstItem="AV6-6I-lgH" firstAttribute="top" secondItem="Iku-WH-O4a" secondAttribute="bottom" constant="4" id="cfk-Rx-U3c"/>
                 <constraint firstAttribute="trailing" secondItem="DuN-8H-V61" secondAttribute="trailing" id="ct2-8s-uYB"/>
                 <constraint firstItem="DuN-8H-V61" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="djz-2P-xvH"/>
+                <constraint firstAttribute="trailing" secondItem="M08-cW-jrt" secondAttribute="trailing" constant="9" id="hAV-OF-izN"/>
                 <constraint firstItem="nGz-jc-2e1" firstAttribute="top" secondItem="DuN-8H-V61" secondAttribute="bottom" constant="15" id="lZG-nm-oDd"/>
+                <constraint firstItem="Iku-WH-O4a" firstAttribute="top" secondItem="nGz-jc-2e1" secondAttribute="bottom" constant="4" id="qqu-ci-hep"/>
+                <constraint firstItem="M08-cW-jrt" firstAttribute="top" secondItem="DuN-8H-V61" secondAttribute="bottom" constant="10" id="slm-WN-QmZ"/>
                 <constraint firstItem="nGz-jc-2e1" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="xBF-en-IWu"/>
             </constraints>
             <size key="customSize" width="224" height="132"/>
@@ -152,6 +177,9 @@
             <point key="canvasLocation" x="449" y="375"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="radar-light.png" width="50" height="50"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
