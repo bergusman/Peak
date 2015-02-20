@@ -14,6 +14,7 @@
 
 #import "PlaceCell.h"
 #import "PlaceCardCell.h"
+#import "FilterCell.h"
 
 #import "UIFont+Helper.h"
 #import "UIColor+Helper.h"
@@ -24,6 +25,9 @@
 @interface MainViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *searchTextField;
+@property (weak, nonatomic) IBOutlet UITableView *searchTableView;
+
+@property (weak, nonatomic) IBOutlet UITableView *filterTableView;
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIView *contentView;
@@ -32,6 +36,8 @@
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
+@property (strong, nonatomic) NSArray *filters;
+
 @end
 
 @implementation MainViewController
@@ -39,8 +45,6 @@
 #pragma mark - Setups
 
 - (void)setupNavigationItem {
-    self.navigationItem.title = @"ALL PLACE AROUND YOU";
-    
     self.navigationController.navigationBar.tintColor = RGB(86, 92, 100);
     
     id attributes = @{NSFontAttributeName: [UIFont dinproBoldFontWithSize:14]};
@@ -48,6 +52,21 @@
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addAction:)];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(profileAction:)];
+    
+    self.navigationItem.title = @"ALL PLACE AROUND YOU";
+    
+    UILabel *label = [[UILabel alloc] init];
+    label.text = @"ALL PLACE AROUND YOU";
+    label.textColor = [UIColor whiteColor];
+    label.font = [UIFont dinproBoldFontWithSize:14];
+    label.textAlignment = NSTextAlignmentCenter;
+    label.userInteractionEnabled = YES;
+    
+    [label sizeToFit];
+    self.navigationItem.titleView = label;
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(filterTapAction:)];
+    [label addGestureRecognizer:tap];
 }
 
 - (void)setupScrollView {
@@ -94,10 +113,41 @@
 
 - (void)setupSearch {
     id attributes = @{NSFontAttributeName: self.searchTextField.font, NSForegroundColorAttributeName: self.searchTextField.textColor};
-    self.searchTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:self.searchTextField.placeholder attributes:attributes];}
+    self.searchTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:self.searchTextField.placeholder attributes:attributes];
+    self.searchTableView.alpha = 0;
+    [self.searchTableView registerNib:[PlaceCell nib] forCellReuseIdentifier:@"cell"];
+}
+
+- (void)setupFilter {
+    self.filters = @[@"ALL PLACE AROUND YOU",
+                     @"HISTORIC PLACE",
+                     @"OLD TOWN",
+                     @"ROMANTIC CAFE",
+                     @"HIPSTER HOUSE",
+                     @"ALPHA BETA MEETING PLACE",
+                     @"COFFESHOP",
+                     @"WINE SHOP",
+                     @"CONCERT HALL",
+                     @"MUSIC FESTIVALS",
+                     ];
+    
+    [self.filterTableView registerNib:[FilterCell nib] forCellReuseIdentifier:@"cell"];
+    self.filterTableView.alpha = 0;
+}
 
 #pragma mark - Content
 
+- (void)showFilter {
+    [UIView animateWithDuration:0.3 animations:^{
+        self.filterTableView.alpha = 1;
+    }];
+}
+
+- (void)hideFilter {
+    [UIView animateWithDuration:0.3 animations:^{
+        self.filterTableView.alpha = 0;
+    }];
+}
 
 #pragma mark - Actions
 
@@ -117,6 +167,14 @@
 - (void)profileAction:(id)sender {
     ProfileViewController *profileVC = [[ProfileViewController alloc] init];
     [self presentViewController:profileVC animated:YES completion:nil];
+}
+
+- (void)filterTapAction:(id)sender {
+    if (self.filterTableView.alpha > 0.5) {
+        [self hideFilter];
+    } else {
+        [self showFilter];
+    }
 }
 
 #pragma mark - UICollectionViewDataSource
@@ -141,25 +199,45 @@
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    if (tableView == self.filterTableView) {
+        return [self.filters count];
+    } else {
+        return 20;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    PlaceCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    return cell;
+    if (tableView == self.filterTableView) {
+        FilterCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+        cell.titleLabel.text = self.filters[indexPath.row];
+        return cell;
+    } else {
+        PlaceCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+        return cell;
+    }
 }
 
 #pragma mark - UITableViewDelegate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [PlaceCell height];
+    if (tableView == self.filterTableView) {
+        return [FilterCell height];
+    } else {
+        return [PlaceCell height];
+    }
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    PlaceViewController *placeVC = [[PlaceViewController alloc] init];
-    [self.navigationController pushViewController:placeVC animated:YES];
+    if (tableView == self.filterTableView) {
+        [self hideFilter];
+        ((UILabel *)self.navigationItem.titleView).text = self.filters[indexPath.row];
+        [self.navigationItem.titleView sizeToFit];
+    } else {
+        PlaceViewController *placeVC = [[PlaceViewController alloc] init];
+        [self.navigationController pushViewController:placeVC animated:YES];
+    }
 }
 
 #pragma mark - UITextFieldDelegate
@@ -167,6 +245,18 @@
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [self.view endEditing:YES];
     return YES;
+}
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField {
+    [UIView animateWithDuration:0.3 animations:^{
+        self.searchTableView.alpha = 1;
+    }];
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+    [UIView animateWithDuration:0.3 animations:^{
+        self.searchTableView.alpha = 0;
+    }];
 }
 
 #pragma mark - UIViewController
@@ -180,6 +270,7 @@
     [self setupMapView];
     [self setupCollectionView];
     [self setupTableView];
+    [self setupFilter];
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.05 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self.mapView setZoom:13 atCoordinate:CLLocationCoordinate2DMake(40.746764, -73.990667) animated:NO];

@@ -22,6 +22,8 @@
 		AD32AEE91A89725D003E4037 /* VerticalSeparatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD32AEE71A89725D003E4037 /* VerticalSeparatorView.m */; };
 		AD32AEEF1A898590003E4037 /* PlaceCardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD32AEED1A898590003E4037 /* PlaceCardCell.m */; };
 		AD32AEF01A898590003E4037 /* PlaceCardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD32AEEE1A898590003E4037 /* PlaceCardCell.xib */; };
+		AD4AD5161A97165A005E23AE /* FilterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4AD5141A97165A005E23AE /* FilterCell.m */; };
+		AD4AD5171A97165A005E23AE /* FilterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD4AD5151A97165A005E23AE /* FilterCell.xib */; };
 		AD8916DD1A88F38700AD5D54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8916DC1A88F38700AD5D54 /* main.m */; };
 		AD8916E01A88F38700AD5D54 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8916DF1A88F38700AD5D54 /* AppDelegate.m */; };
 		AD8916E81A88F38700AD5D54 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD8916E71A88F38700AD5D54 /* Images.xcassets */; };
@@ -97,6 +99,9 @@
 		AD32AEEC1A898590003E4037 /* PlaceCardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceCardCell.h; sourceTree = "<group>"; };
 		AD32AEED1A898590003E4037 /* PlaceCardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceCardCell.m; sourceTree = "<group>"; };
 		AD32AEEE1A898590003E4037 /* PlaceCardCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlaceCardCell.xib; sourceTree = "<group>"; };
+		AD4AD5131A97165A005E23AE /* FilterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterCell.h; sourceTree = "<group>"; };
+		AD4AD5141A97165A005E23AE /* FilterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterCell.m; sourceTree = "<group>"; };
+		AD4AD5151A97165A005E23AE /* FilterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilterCell.xib; sourceTree = "<group>"; };
 		AD8916D71A88F38700AD5D54 /* Peak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Peak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD8916DB1A88F38700AD5D54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD8916DC1A88F38700AD5D54 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -257,6 +262,16 @@
 			name = "Place Card Cell";
 			sourceTree = "<group>";
 		};
+		AD4AD5121A971639005E23AE /* Filter Cell */ = {
+			isa = PBXGroup;
+			children = (
+				AD4AD5131A97165A005E23AE /* FilterCell.h */,
+				AD4AD5141A97165A005E23AE /* FilterCell.m */,
+				AD4AD5151A97165A005E23AE /* FilterCell.xib */,
+			);
+			name = "Filter Cell";
+			sourceTree = "<group>";
+		};
 		AD8916CE1A88F38700AD5D54 = {
 			isa = PBXGroup;
 			children = (
@@ -362,6 +377,7 @@
 		AD8917041A8929A100AD5D54 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				AD4AD5121A971639005E23AE /* Filter Cell */,
 				ADD8E72D1A92FDF6003AFCDE /* Radar */,
 				ADD8E7291A92F1E0003AFCDE /* Filter Button */,
 				AD32AEEB1A89842C003E4037 /* Place Card Cell */,
@@ -567,6 +583,7 @@
 				TargetAttributes = {
 					AD8916D61A88F38700AD5D54 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 5G5YZAQBSX;
 					};
 					AD8916EF1A88F38700AD5D54 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -619,6 +636,7 @@
 				ADD8E7401A9303C0003AFCDE /* PhotoCell.xib in Resources */,
 				AD32AEE31A896DBD003E4037 /* HeaderCell.xib in Resources */,
 				ADD8E7321A92FE62003AFCDE /* radar-light@2x.png in Resources */,
+				AD4AD5171A97165A005E23AE /* FilterCell.xib in Resources */,
 				ADD8E73A1A930312003AFCDE /* rate@2x.png in Resources */,
 				AD8916E81A88F38700AD5D54 /* Images.xcassets in Resources */,
 			);
@@ -677,6 +695,7 @@
 				ADD8E72C1A92F204003AFCDE /* FilterButtonView.m in Sources */,
 				AD8917261A892B2900AD5D54 /* ProfileViewController.m in Sources */,
 				AD89172B1A892B3600AD5D54 /* EditProfileViewController.m in Sources */,
+				AD4AD5161A97165A005E23AE /* FilterCell.m in Sources */,
 				AD32AECD1A8966B3003E4037 /* UIImage+Helper.m in Sources */,
 				AD8917171A892ABC00AD5D54 /* MainViewController.m in Sources */,
 				AD32AED01A896745003E4037 /* UIFont+Helper.m in Sources */,
@@ -809,6 +828,7 @@
 			baseConfigurationReference = 9D2297CCC32E726A8DAF6347 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Vitaliy Berg (8247S34VCP)";
 				CODE_SIGN_RESOURCE_RULES_PATH = "$(SDKROOT)/ResourceRules.plist";
 				INFOPLIST_FILE = Peak/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -821,6 +841,7 @@
 			baseConfigurationReference = 0EF5CF6BE06A13B8755B7DD9 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Vitaliy Berg (8247S34VCP)";
 				CODE_SIGN_RESOURCE_RULES_PATH = "$(SDKROOT)/ResourceRules.plist";
 				INFOPLIST_FILE = Peak/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

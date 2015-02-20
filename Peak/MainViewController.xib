@@ -13,8 +13,10 @@
             <connections>
                 <outlet property="collectionView" destination="7RK-K3-fjs" id="C6y-zo-Crj"/>
                 <outlet property="contentView" destination="G9P-dk-1w8" id="Jnm-j4-2wX"/>
+                <outlet property="filterTableView" destination="VzS-sj-jJA" id="pZb-w2-9cJ"/>
                 <outlet property="mapView" destination="ulF-qg-mLh" id="Iyl-6w-KhC"/>
                 <outlet property="scrollView" destination="eJG-Py-CS3" id="5dS-vi-bcK"/>
+                <outlet property="searchTableView" destination="Nhq-Jd-uSi" id="Cxh-DT-g28"/>
                 <outlet property="searchTextField" destination="RrW-ne-db9" id="UpF-0H-F58"/>
                 <outlet property="tableView" destination="ZOY-Fd-80T" id="NXy-He-bsI"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -154,12 +156,37 @@
                         <constraint firstItem="RrW-ne-db9" firstAttribute="leading" secondItem="b3r-QQ-qzZ" secondAttribute="leading" constant="23" id="pRO-3q-Zvo"/>
                     </constraints>
                 </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Nhq-Jd-uSi" userLabel="Search Table View">
+                    <rect key="frame" x="0.0" y="42" width="750" height="625"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="tcy-me-9dp"/>
+                        <outlet property="delegate" destination="-1" id="GMU-d2-Nrv"/>
+                    </connections>
+                </tableView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="VzS-sj-jJA" userLabel="Filter Table View">
+                    <rect key="frame" x="0.0" y="0.0" width="750" height="667"/>
+                    <color key="backgroundColor" red="0.1137254902" green="0.12549019610000001" blue="0.1450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="separatorColor" red="0.20392156862745098" green="0.21568627450980393" blue="0.23137254901960785" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="2mE-la-iLa"/>
+                        <outlet property="delegate" destination="-1" id="Zbf-2o-1Xy"/>
+                    </connections>
+                </tableView>
             </subviews>
             <color key="backgroundColor" red="0.16862745098039217" green="0.1803921568627451" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="eJG-Py-CS3" secondAttribute="bottom" id="2Qj-N1-h2F"/>
+                <constraint firstItem="VzS-sj-jJA" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="8W9-VI-lEj"/>
+                <constraint firstItem="VzS-sj-jJA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="E1H-5T-BX9"/>
+                <constraint firstItem="Nhq-Jd-uSi" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="LJz-wY-sCz"/>
                 <constraint firstItem="b3r-QQ-qzZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="PgK-OF-CQd"/>
+                <constraint firstAttribute="bottom" secondItem="VzS-sj-jJA" secondAttribute="bottom" id="YTM-KX-hhV"/>
+                <constraint firstAttribute="trailing" secondItem="VzS-sj-jJA" secondAttribute="trailing" id="Z09-KE-sWM"/>
+                <constraint firstAttribute="trailing" secondItem="Nhq-Jd-uSi" secondAttribute="trailing" id="lwp-JU-cng"/>
                 <constraint firstItem="b3r-QQ-qzZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="mQj-dI-WYX"/>
+                <constraint firstAttribute="bottom" secondItem="Nhq-Jd-uSi" secondAttribute="bottom" id="mZH-YK-zgQ"/>
+                <constraint firstItem="Nhq-Jd-uSi" firstAttribute="top" secondItem="b3r-QQ-qzZ" secondAttribute="bottom" id="qpe-aE-GOw"/>
                 <constraint firstAttribute="trailing" secondItem="b3r-QQ-qzZ" secondAttribute="trailing" id="sG1-AG-6YD"/>
                 <constraint firstAttribute="trailing" secondItem="eJG-Py-CS3" secondAttribute="trailing" id="swy-pu-wDI"/>
                 <constraint firstItem="eJG-Py-CS3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="w4v-7i-SsB"/>
