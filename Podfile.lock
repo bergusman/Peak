@@ -35,7 +35,7 @@ PODS:
     - FMDB (= 2.3)
     - GRMustache (= 7.3.0)
     - SMCalloutView (= 2.0)
-  - Reveal-iOS-SDK (1.5.0)
+  - Reveal-iOS-SDK (1.5.1)
   - SDWebImage (3.7.1):
     - SDWebImage/Core (= 3.7.1)
   - SDWebImage/Core (3.7.1)
@@ -55,7 +55,7 @@ SPEC CHECKSUMS:
   GRMustache: efecd3b603f0a7a99cf6bdf3998782ee0c465726
   JRSwizzle: 30da7a2c539a4ebf954b16d15f6dd8221c9f6fa5
   Mapbox-iOS-SDK: 189a35013e100f1464cd2f9f6c489d6326fbb927
-  Reveal-iOS-SDK: b6d94eb78d84ebd2e3182063577975561cd6dbd9
+  Reveal-iOS-SDK: dcfeb671c7da222c85f18f866da2ce88de075524
   SDWebImage: 116e88633b5b416ea0ca4b334a4ac59cf72dd38d
   SMCalloutView: c1906604d47c058400ade5c9d52ab98aa77b7e76
 

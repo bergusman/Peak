@@ -50,8 +50,8 @@
     id attributes = @{NSFontAttributeName: [UIFont dinproBoldFontWithSize:14]};
     [self.navigationController.navigationBar setTitleTextAttributes:attributes];
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addAction:)];
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(profileAction:)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"navbar-plus"] style:UIBarButtonItemStylePlain target:self action:@selector(addAction:)];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"navbar-profile"] style:UIBarButtonItemStylePlain target:self action:@selector(profileAction:)];
     
     self.navigationItem.title = @"ALL PLACE AROUND YOU";
     

@@ -49,6 +49,9 @@
 		AD89173B1A894F3A00AD5D54 /* DINPro-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = AD8917361A894F3A00AD5D54 /* DINPro-Light.otf */; };
 		AD89173C1A894F3A00AD5D54 /* DINPro-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = AD8917371A894F3A00AD5D54 /* DINPro-Medium.otf */; };
 		AD89173D1A894F3A00AD5D54 /* DINPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = AD8917381A894F3A00AD5D54 /* DINPro-Regular.otf */; };
+		ADC4191A1A9D2FDD00EB0D70 /* navbar-profile@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC419191A9D2FDD00EB0D70 /* navbar-profile@2x.png */; };
+		ADC4191C1A9D2FE000EB0D70 /* navbar-plus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC4191B1A9D2FE000EB0D70 /* navbar-plus@2x.png */; };
+		ADD41A501A9DB0B900AB4F6D /* geo-pin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADD41A4F1A9DB0B900AB4F6D /* geo-pin@2x.png */; };
 		ADD8E72C1A92F204003AFCDE /* FilterButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD8E72B1A92F204003AFCDE /* FilterButtonView.m */; };
 		ADD8E7301A92FE0C003AFCDE /* LightRadarView.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD8E72F1A92FE0C003AFCDE /* LightRadarView.m */; };
 		ADD8E7321A92FE62003AFCDE /* radar-light@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADD8E7311A92FE62003AFCDE /* radar-light@2x.png */; };
@@ -140,6 +143,9 @@
 		AD8917361A894F3A00AD5D54 /* DINPro-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINPro-Light.otf"; sourceTree = "<group>"; };
 		AD8917371A894F3A00AD5D54 /* DINPro-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINPro-Medium.otf"; sourceTree = "<group>"; };
 		AD8917381A894F3A00AD5D54 /* DINPro-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINPro-Regular.otf"; sourceTree = "<group>"; };
+		ADC419191A9D2FDD00EB0D70 /* navbar-profile@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navbar-profile@2x.png"; sourceTree = "<group>"; };
+		ADC4191B1A9D2FE000EB0D70 /* navbar-plus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navbar-plus@2x.png"; sourceTree = "<group>"; };
+		ADD41A4F1A9DB0B900AB4F6D /* geo-pin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "geo-pin@2x.png"; sourceTree = "<group>"; };
 		ADD8E72A1A92F204003AFCDE /* FilterButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterButtonView.h; sourceTree = "<group>"; };
 		ADD8E72B1A92F204003AFCDE /* FilterButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterButtonView.m; sourceTree = "<group>"; };
 		ADD8E72E1A92FE0C003AFCDE /* LightRadarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LightRadarView.h; sourceTree = "<group>"; };
@@ -197,6 +203,9 @@
 		AD32AEC51A895B38003E4037 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				ADD41A4F1A9DB0B900AB4F6D /* geo-pin@2x.png */,
+				ADC4191B1A9D2FE000EB0D70 /* navbar-plus@2x.png */,
+				ADC419191A9D2FDD00EB0D70 /* navbar-profile@2x.png */,
 				AD32AEC61A895B43003E4037 /* login-bg@2x.png */,
 			);
 			name = Images;
@@ -619,6 +628,7 @@
 				AD89173A1A894F3A00AD5D54 /* DINPro-Bold.otf in Resources */,
 				AD8917271A892B2900AD5D54 /* ProfileViewController.xib in Resources */,
 				AD32AEC71A895B43003E4037 /* login-bg@2x.png in Resources */,
+				ADD41A501A9DB0B900AB4F6D /* geo-pin@2x.png in Resources */,
 				AD32AED51A89697E003E4037 /* PlaceCell.xib in Resources */,
 				AD8917131A892AAB00AD5D54 /* SignUpViewController.xib in Resources */,
 				AD89172C1A892B3600AD5D54 /* EditProfileViewController.xib in Resources */,
@@ -627,6 +637,7 @@
 				AD32AEDA1A89698E003E4037 /* CommentCell.xib in Resources */,
 				AD89170E1A892A9E00AD5D54 /* LogInViewController.xib in Resources */,
 				AD8916EB1A88F38700AD5D54 /* LaunchScreen.xib in Resources */,
+				ADC4191C1A9D2FE000EB0D70 /* navbar-plus@2x.png in Resources */,
 				AD89173C1A894F3A00AD5D54 /* DINPro-Medium.otf in Resources */,
 				AD89173B1A894F3A00AD5D54 /* DINPro-Light.otf in Resources */,
 				AD8917391A894F3A00AD5D54 /* DINPro-Black.otf in Resources */,
@@ -637,6 +648,7 @@
 				AD32AEE31A896DBD003E4037 /* HeaderCell.xib in Resources */,
 				ADD8E7321A92FE62003AFCDE /* radar-light@2x.png in Resources */,
 				AD4AD5171A97165A005E23AE /* FilterCell.xib in Resources */,
+				ADC4191A1A9D2FDD00EB0D70 /* navbar-profile@2x.png in Resources */,
 				ADD8E73A1A930312003AFCDE /* rate@2x.png in Resources */,
 				AD8916E81A88F38700AD5D54 /* Images.xcassets in Resources */,
 			);

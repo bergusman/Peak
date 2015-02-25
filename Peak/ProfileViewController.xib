@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14D72i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7519.1" systemVersion="14D87h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7513.1"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="DINPro-Medium.otf">
@@ -104,14 +104,8 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="207"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Los Angeles, CA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rib-ef-bqj">
-                    <rect key="frame" x="20" y="163" width="335" height="23.5"/>
-                    <fontDescription key="fontDescription" name="DINPro-Regular" family="DINPro" pointSize="18"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SrY-DN-CzY" customClass="LoadingImageView">
-                    <rect key="frame" x="155" y="74" width="64" height="64"/>
+                    <rect key="frame" x="155" y="82" width="64" height="64"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Cz-7k-Use">
                             <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
@@ -135,20 +129,45 @@
                         <outlet property="imageView" destination="2Cz-7k-Use" id="vQi-0J-Fht"/>
                     </connections>
                 </view>
+                <view contentMode="scaleToFill" horizontalHuggingPriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="TUa-N8-M9c">
+                    <rect key="frame" x="113" y="163" width="149" height="24"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Los Angeles, CA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rib-ef-bqj">
+                            <rect key="frame" x="20" y="0.0" width="129" height="24"/>
+                            <fontDescription key="fontDescription" name="DINPro-Regular" family="DINPro" pointSize="18"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="geo-pin.png" translatesAutoresizingMaskIntoConstraints="NO" id="1eT-Bz-2Z3">
+                            <rect key="frame" x="0.0" y="3" width="14" height="18"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="Rib-ef-bqj" firstAttribute="top" secondItem="TUa-N8-M9c" secondAttribute="top" id="0G3-gt-nAV"/>
+                        <constraint firstAttribute="centerY" secondItem="1eT-Bz-2Z3" secondAttribute="centerY" id="8RZ-fx-Mxm"/>
+                        <constraint firstItem="1eT-Bz-2Z3" firstAttribute="leading" secondItem="TUa-N8-M9c" secondAttribute="leading" id="F13-46-1bZ"/>
+                        <constraint firstAttribute="bottom" secondItem="Rib-ef-bqj" secondAttribute="bottom" id="HmQ-1n-zzP"/>
+                        <constraint firstAttribute="trailing" secondItem="Rib-ef-bqj" secondAttribute="trailing" id="MYW-Ek-6iQ"/>
+                        <constraint firstItem="Rib-ef-bqj" firstAttribute="leading" secondItem="1eT-Bz-2Z3" secondAttribute="trailing" constant="6" id="hM3-ZQ-Sog"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="Rib-ef-bqj" firstAttribute="leading" secondItem="ehF-oS-lvZ" secondAttribute="leading" constant="20" id="PNf-9u-43S"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="TUa-N8-M9c" secondAttribute="trailing" constant="20" id="EZ1-3M-rpl"/>
+                <constraint firstAttribute="centerX" secondItem="TUa-N8-M9c" secondAttribute="centerX" id="Suh-pz-I5T"/>
+                <constraint firstItem="TUa-N8-M9c" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ehF-oS-lvZ" secondAttribute="leading" constant="20" id="VD2-yb-DOY"/>
                 <constraint firstAttribute="centerX" secondItem="SrY-DN-CzY" secondAttribute="centerX" id="YsG-NH-i8Z"/>
-                <constraint firstAttribute="trailing" secondItem="Rib-ef-bqj" secondAttribute="trailing" constant="20" id="fZN-tn-RfJ"/>
-                <constraint firstAttribute="bottom" secondItem="Rib-ef-bqj" secondAttribute="bottom" constant="20" id="lU1-4u-gqi"/>
-                <constraint firstItem="SrY-DN-CzY" firstAttribute="top" secondItem="ehF-oS-lvZ" secondAttribute="top" constant="74" id="niI-GK-q6W"/>
+                <constraint firstItem="SrY-DN-CzY" firstAttribute="top" secondItem="ehF-oS-lvZ" secondAttribute="top" constant="82" id="niI-GK-q6W"/>
+                <constraint firstAttribute="bottom" secondItem="TUa-N8-M9c" secondAttribute="bottom" constant="20" id="w8i-ho-SEj"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="818.5" y="144.5"/>
         </view>
     </objects>
     <resources>
+        <image name="geo-pin.png" width="14" height="18"/>
         <image name="login-bg.png" width="375" height="667"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

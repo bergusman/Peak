@@ -9,6 +9,7 @@
 #import "ProfileViewController.h"
 
 #import "EditProfileViewController.h"
+#import "PlaceViewController.h"
 
 #import "HeaderCell.h"
 #import "PlaceCell.h"
@@ -108,6 +109,12 @@
     }
     
     return 0;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    PlaceViewController *placeVC = [[PlaceViewController alloc] init];
+    [self presentViewController:placeVC animated:YES completion:nil];
 }
 
 #pragma mark - UIViewController

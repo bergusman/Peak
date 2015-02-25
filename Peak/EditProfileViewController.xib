@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14D72i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7519.1" systemVersion="14D87h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7513.1"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="DINPro-Bold.otf">
@@ -26,6 +26,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditProfileViewController">
             <connections>
+                <outlet property="avatarButton" destination="xoo-gh-nxN" id="FPg-R4-5lh"/>
+                <outlet property="avatarView" destination="9mJ-e8-S7R" id="8Id-ZU-4x5"/>
+                <outlet property="scrollView" destination="Mfn-DX-kwi" id="PbU-Ov-79v"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -34,81 +37,129 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="995"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login-bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="t41-ey-ihD">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login-bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="t41-ey-ihD" userLabel="Background Image View">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="995"/>
                 </imageView>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mfn-DX-kwi">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="995"/>
                     <subviews>
-                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="136-Wy-pnO">
-                            <rect key="frame" x="0.0" y="180" width="375" height="492"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Z4y-pa-7dN" userLabel="Backgroud Image View">
+                            <rect key="frame" x="0.0" y="180" width="375" height="1200"/>
+                            <color key="backgroundColor" red="0.15686274509803921" green="0.17647058823529413" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1200" id="RfI-iC-V9w"/>
+                            </constraints>
+                        </imageView>
+                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9mJ-e8-S7R" customClass="LoadingImageView">
+                            <rect key="frame" x="155" y="80" width="64" height="64"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="PROFILE INFO" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gHr-Up-79Y">
-                                    <rect key="frame" x="10" y="15" width="355" height="15.5"/>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Cqr-mO-RIR">
+                                    <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xoo-gh-nxN">
+                                    <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                    <state key="normal">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="avatarTouchUpInside:" destination="-1" eventType="touchUpInside" id="UIq-AM-DU2"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="xoo-gh-nxN" firstAttribute="top" secondItem="9mJ-e8-S7R" secondAttribute="top" id="1BO-RE-EhJ"/>
+                                <constraint firstItem="Cqr-mO-RIR" firstAttribute="leading" secondItem="9mJ-e8-S7R" secondAttribute="leading" id="31r-1H-QEe"/>
+                                <constraint firstAttribute="height" constant="64" id="3UR-41-USE"/>
+                                <constraint firstAttribute="bottom" secondItem="xoo-gh-nxN" secondAttribute="bottom" id="F3f-Ih-jDT"/>
+                                <constraint firstAttribute="bottom" secondItem="Cqr-mO-RIR" secondAttribute="bottom" id="Mm7-Ml-Foh"/>
+                                <constraint firstAttribute="trailing" secondItem="Cqr-mO-RIR" secondAttribute="trailing" id="UhH-pq-zu7"/>
+                                <constraint firstAttribute="trailing" secondItem="xoo-gh-nxN" secondAttribute="trailing" id="aNU-23-e5W"/>
+                                <constraint firstItem="Cqr-mO-RIR" firstAttribute="top" secondItem="9mJ-e8-S7R" secondAttribute="top" id="ddJ-rC-ug3"/>
+                                <constraint firstAttribute="width" constant="64" id="mG2-VX-cfi"/>
+                                <constraint firstItem="xoo-gh-nxN" firstAttribute="leading" secondItem="9mJ-e8-S7R" secondAttribute="leading" id="qFO-Fd-XJz"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="32"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <outlet property="imageView" destination="Cqr-mO-RIR" id="4fZ-jk-T3n"/>
+                            </connections>
+                        </view>
+                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="136-Wy-pnO">
+                            <rect key="frame" x="0.0" y="180" width="375" height="493"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PROFILE INFO" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gHr-Up-79Y" userLabel="Title Label">
+                                    <rect key="frame" x="10" y="15" width="355" height="16"/>
                                     <fontDescription key="fontDescription" name="DINPro-Bold" family="DINPro" pointSize="12"/>
                                     <color key="textColor" red="0.17254901959999999" green="0.61176470589999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4gj-ZU-1dg" userLabel="Email Text Field" customClass="TextField">
-                                    <rect key="frame" x="10" y="40" width="355" height="50"/>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4gj-ZU-1dg" userLabel="Name Text Field" customClass="TextField">
+                                    <rect key="frame" x="10" y="41" width="355" height="50"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="50" id="mn5-8L-NyT"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" name="DINPro-Regular" family="DINPro" pointSize="16"/>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardAppearance="alert" returnKeyType="next"/>
                                 </textField>
-                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VnQ-ai-nFK" userLabel="Email Text Field" customClass="TextField">
-                                    <rect key="frame" x="10" y="100" width="355" height="50"/>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VnQ-ai-nFK" userLabel="Email Text Field" customClass="TextField">
+                                    <rect key="frame" x="10" y="101" width="355" height="50"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="50" id="lRa-zM-e9d"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" name="DINPro-Regular" family="DINPro" pointSize="16"/>
                                     <textInputTraits key="textInputTraits" keyboardType="emailAddress" keyboardAppearance="alert" returnKeyType="next"/>
                                 </textField>
-                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Location" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9TW-Po-zPf" userLabel="Email Text Field" customClass="TextField">
-                                    <rect key="frame" x="10" y="160" width="355" height="50"/>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Location" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9TW-Po-zPf" userLabel="Location Text Field" customClass="TextField">
+                                    <rect key="frame" x="10" y="161" width="355" height="50"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="50" id="Bnu-Nx-6Tb"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" name="DINPro-Regular" family="DINPro" pointSize="16"/>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardAppearance="alert" returnKeyType="next"/>
                                 </textField>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="CHANGE PASSWORD" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKU-Ap-Dex">
-                                    <rect key="frame" x="10" y="225" width="355" height="15.5"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHANGE PASSWORD" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKU-Ap-Dex" userLabel="Title Label">
+                                    <rect key="frame" x="10" y="226" width="355" height="16"/>
                                     <fontDescription key="fontDescription" name="DINPro-Bold" family="DINPro" pointSize="12"/>
                                     <color key="textColor" red="0.17254901959999999" green="0.61176470589999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Old Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="54V-mb-YuG" userLabel="Email Text Field" customClass="TextField">
-                                    <rect key="frame" x="10" y="250" width="355" height="50"/>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Old Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="54V-mb-YuG" userLabel="Old Password Text Field" customClass="TextField">
+                                    <rect key="frame" x="10" y="251" width="355" height="50"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="50" id="fjB-0J-OaG"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" name="DINPro-Regular" family="DINPro" pointSize="16"/>
                                     <textInputTraits key="textInputTraits" keyboardType="emailAddress" keyboardAppearance="alert" returnKeyType="next" secureTextEntry="YES"/>
                                 </textField>
-                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="New Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TQr-VS-L7D" userLabel="Email Text Field" customClass="TextField">
-                                    <rect key="frame" x="10" y="310" width="355" height="50"/>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="New Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TQr-VS-L7D" userLabel="Password Text Field" customClass="TextField">
+                                    <rect key="frame" x="10" y="311" width="355" height="50"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="50" id="aws-9I-Rkw"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" name="DINPro-Regular" family="DINPro" pointSize="16"/>
                                     <textInputTraits key="textInputTraits" keyboardType="emailAddress" keyboardAppearance="alert" returnKeyType="next" secureTextEntry="YES"/>
                                 </textField>
-                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Re-Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xvf-2I-ciL" userLabel="Email Text Field" customClass="TextField">
-                                    <rect key="frame" x="10" y="370" width="355" height="50"/>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Re-Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xvf-2I-ciL" userLabel="Re-password Text Field" customClass="TextField">
+                                    <rect key="frame" x="10" y="371" width="355" height="50"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="50" id="aXg-TJ-vN4"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" name="DINPro-Regular" family="DINPro" pointSize="16"/>
                                     <textInputTraits key="textInputTraits" keyboardType="emailAddress" keyboardAppearance="alert" returnKeyType="next" secureTextEntry="YES"/>
                                 </textField>
-                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tx0-X2-Vq0">
-                                    <rect key="frame" x="125" y="440" width="125" height="32"/>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tx0-X2-Vq0" userLabel="Delete Button">
+                                    <rect key="frame" x="125" y="442" width="125" height="32"/>
                                     <fontDescription key="fontDescription" name="DINPro-Regular" family="DINPro" pointSize="15"/>
                                     <state key="normal" title="DELETE ACCOUNT">
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
+                                    <connections>
+                                        <action selector="deleteAccountTouchUpInside:" destination="-1" eventType="touchUpInside" id="tra-eJ-WaQ"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" red="0.15686274509803921" green="0.17647058823529413" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -145,22 +196,27 @@
                         </view>
                     </subviews>
                     <constraints>
+                        <constraint firstItem="9mJ-e8-S7R" firstAttribute="top" secondItem="Mfn-DX-kwi" secondAttribute="top" constant="80" id="Ank-bU-fCA"/>
+                        <constraint firstAttribute="trailing" secondItem="Z4y-pa-7dN" secondAttribute="trailing" id="BWv-Bs-LUs"/>
                         <constraint firstItem="136-Wy-pnO" firstAttribute="leading" secondItem="Mfn-DX-kwi" secondAttribute="leading" id="UVS-Bi-RCE"/>
                         <constraint firstAttribute="trailing" secondItem="136-Wy-pnO" secondAttribute="trailing" id="Vh2-Qy-Dt5"/>
+                        <constraint firstItem="Z4y-pa-7dN" firstAttribute="leading" secondItem="Mfn-DX-kwi" secondAttribute="leading" id="dq1-T4-F7H"/>
                         <constraint firstItem="136-Wy-pnO" firstAttribute="top" secondItem="Mfn-DX-kwi" secondAttribute="top" constant="180" id="goo-1K-69F"/>
+                        <constraint firstItem="136-Wy-pnO" firstAttribute="top" secondItem="Z4y-pa-7dN" secondAttribute="top" id="hqI-ti-8Kl"/>
+                        <constraint firstAttribute="centerX" secondItem="9mJ-e8-S7R" secondAttribute="centerX" id="lz6-cw-QMJ"/>
                         <constraint firstAttribute="bottom" secondItem="136-Wy-pnO" secondAttribute="bottom" id="xVY-b8-yUL"/>
                     </constraints>
                 </scrollView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MyC-HN-6T1">
                     <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Sasha Grey" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="47Q-Dk-5lg">
-                            <rect key="frame" x="137" y="9" width="100.5" height="26"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sasha Grey" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="47Q-Dk-5lg">
+                            <rect key="frame" x="137" y="9" width="101" height="26"/>
                             <fontDescription key="fontDescription" name="DINPro-Medium" family="DINPro" pointSize="20"/>
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zSj-lI-gco">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zSj-lI-gco">
                             <rect key="frame" x="321" y="4" width="38" height="36"/>
                             <fontDescription key="fontDescription" name="DINPro-Regular" family="DINPro" pointSize="18"/>
                             <state key="normal" title="Save">
@@ -171,7 +227,7 @@
                                 <action selector="saveAction:" destination="-1" eventType="touchUpInside" id="eux-B4-75t"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7eM-tn-SX6">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7eM-tn-SX6">
                             <rect key="frame" x="16" y="4" width="55" height="36"/>
                             <fontDescription key="fontDescription" name="DINPro-Regular" family="DINPro" pointSize="18"/>
                             <state key="normal" title="Cancel">
