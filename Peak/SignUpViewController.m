@@ -8,10 +8,17 @@
 
 #import "SignUpViewController.h"
 
+#import "UIWindow+Helper.h"
+
 @interface SignUpViewController ()
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *titleTopConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *fieldsTopConstraint;
+
+@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *emailTextField;
+@property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
+@property (weak, nonatomic) IBOutlet UITextField *rePasswordTextField;
 
 @end
 
@@ -33,8 +40,8 @@
     UIViewAnimationCurve curve = [notification.userInfo[UIKeyboardAnimationCurveUserInfoKey] integerValue];
     UIViewAnimationOptions options = curve << 16;
     
-    self.titleTopConstraint.constant = 30;
-    self.fieldsTopConstraint.constant = 100;
+    self.titleTopConstraint.constant = VALUE_FROM(70, -60, 30, 72);
+    self.fieldsTopConstraint.constant = VALUE_FROM(144, 20, 100, 152);
     
     [UIView animateWithDuration:duration delay:0 options:options animations:^{
         [self.view layoutIfNeeded];
@@ -46,8 +53,8 @@
     UIViewAnimationCurve curve = [notification.userInfo[UIKeyboardAnimationCurveUserInfoKey] integerValue];
     UIViewAnimationOptions options = curve << 16;
     
-    self.titleTopConstraint.constant = 74;
-    self.fieldsTopConstraint.constant = 180;
+    self.titleTopConstraint.constant = VALUE_FROM(70, 58, 74, 132);
+    self.fieldsTopConstraint.constant = VALUE_FROM(144, 140, 180, 220);
     
     [UIView animateWithDuration:duration delay:0 options:options animations:^{
         [self.view layoutIfNeeded];
@@ -68,11 +75,29 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+#pragma mark - UITextFieldDelegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    if (textField == self.nameTextField) {
+        [self.emailTextField becomeFirstResponder];
+    } else if (textField == self.emailTextField) {
+        [self.passwordTextField becomeFirstResponder];
+    } else if (textField == self.passwordTextField) {
+        [self.rePasswordTextField becomeFirstResponder];
+    } else if (textField == self.rePasswordTextField) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
+    return YES;
+}
+
 #pragma mark - UIViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupKeyboardNotifications];
+    
+    self.titleTopConstraint.constant = VALUE_FROM(70, 58, 74, 132);
+    self.fieldsTopConstraint.constant = VALUE_FROM(144, 140, 180, 220);
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
