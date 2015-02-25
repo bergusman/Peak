@@ -10,14 +10,56 @@
 
 #import "SignUpViewController.h"
 
-// TODO: move log in fields for keyboard
+#import "UIWindow+Helper.h"
+
 // TODO: animate blue border of text fields
 
-@interface LogInViewController ()
+@interface LogInViewController () <UITextFieldDelegate>
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *titleTopConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *fieldsTopConstraint;
+
+@property (weak, nonatomic) IBOutlet UITextField *emailTextField;
+@property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 
 @end
 
 @implementation LogInViewController
+
+#pragma mark - Setups
+
+- (void)setupKeyboardNotifications {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShowNotification:) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHideNotification:) name:UIKeyboardWillHideNotification object:nil];
+}
+
+#pragma mark - Keyboard Notifications
+
+- (void)keyboardWillShowNotification:(NSNotification *)notification {
+    NSTimeInterval duration = [notification.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    UIViewAnimationCurve curve = [notification.userInfo[UIKeyboardAnimationCurveUserInfoKey] integerValue];
+    UIViewAnimationOptions options = curve << 16;
+    
+    self.titleTopConstraint.constant = VALUE_FROM(-50, 44, 125, 174);
+    self.fieldsTopConstraint.constant = VALUE_FROM(36, 114, 206, 255);
+    
+    [UIView animateWithDuration:duration delay:0 options:options animations:^{
+        [self.view layoutIfNeeded];
+    } completion:nil];
+}
+
+- (void)keyboardWillHideNotification:(NSNotification *)notification {
+    NSTimeInterval duration = [notification.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    UIViewAnimationCurve curve = [notification.userInfo[UIKeyboardAnimationCurveUserInfoKey] integerValue];
+    UIViewAnimationOptions options = curve << 16;
+    
+    self.titleTopConstraint.constant = VALUE_FROM(70, 104, 125, 174);
+    self.fieldsTopConstraint.constant = VALUE_FROM(144, 185, 206, 255);
+    
+    [UIView animateWithDuration:duration delay:0 options:options animations:^{
+        [self.view layoutIfNeeded];
+    } completion:nil];
+}
 
 #pragma mark - Actions
 
@@ -34,10 +76,25 @@
     [self presentViewController:signUpVC animated:YES completion:nil];
 }
 
+#pragma mark - UITextFieldDelegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    if (textField == self.emailTextField) {
+        [self.passwordTextField becomeFirstResponder];
+    } else if (textField == self.passwordTextField) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
+    return YES;
+}
+
 #pragma mark - UIViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setupKeyboardNotifications];
+    
+    self.titleTopConstraint.constant = VALUE_FROM(70, 104, 125, 174);
+    self.fieldsTopConstraint.constant = VALUE_FROM(144, 185, 206, 255);
 }
 
 - (void)viewWillDisappear:(BOOL)animated {

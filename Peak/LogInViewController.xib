@@ -15,6 +15,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LogInViewController">
             <connections>
+                <outlet property="emailTextField" destination="VsV-eD-efC" id="Y2t-3C-1I7"/>
+                <outlet property="fieldsTopConstraint" destination="tMp-xM-ppi" id="igQ-5w-myk"/>
+                <outlet property="passwordTextField" destination="bnl-hz-luU" id="uDz-9p-NPf"/>
+                <outlet property="titleTopConstraint" destination="nLN-98-cEi" id="qWc-CY-sIr"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -27,7 +31,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <color key="backgroundColor" red="0.18431372549019609" green="0.20392156862745098" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log in" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vS5-qF-ml3" userLabel="Log In Label">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log in" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vS5-qF-ml3" userLabel="Title Label">
                     <rect key="frame" x="138" y="125" width="98" height="46.5"/>
                     <fontDescription key="fontDescription" name="DINPro-Regular" family="DINPro" pointSize="36"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -43,6 +47,9 @@
                             </constraints>
                             <fontDescription key="fontDescription" name="DINPro-Regular" family="DINPro" pointSize="16"/>
                             <textInputTraits key="textInputTraits" keyboardType="emailAddress" keyboardAppearance="alert" returnKeyType="next"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="Z7W-x2-w31"/>
+                            </connections>
                         </textField>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bnl-hz-luU" userLabel="Password Text Field" customClass="TextField">
                             <rect key="frame" x="10" y="67" width="355" height="50"/>
@@ -51,6 +58,9 @@
                             </constraints>
                             <fontDescription key="fontDescription" name="DINPro-Regular" family="DINPro" pointSize="16"/>
                             <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="done" secureTextEntry="YES"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="e7R-6e-OMD"/>
+                            </connections>
                         </textField>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0yM-Tz-2yY" userLabel="Log in Button">
                             <rect key="frame" x="10" y="131" width="355" height="50"/>
@@ -101,7 +111,6 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <gestureRecognizers/>
             <constraints>
-                <constraint firstItem="RXm-kU-fzW" firstAttribute="top" secondItem="vS5-qF-ml3" secondAttribute="bottom" constant="35" id="2TA-jj-84J"/>
                 <constraint firstItem="RXm-kU-fzW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="G2C-z4-D7l"/>
                 <constraint firstItem="LGY-dP-4ge" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="LPm-rb-7DD"/>
                 <constraint firstAttribute="trailing" secondItem="RXm-kU-fzW" secondAttribute="trailing" id="QWw-rW-90h"/>
@@ -111,6 +120,7 @@
                 <constraint firstItem="vS5-qF-ml3" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="125" id="nLN-98-cEi"/>
                 <constraint firstAttribute="trailing" secondItem="LGY-dP-4ge" secondAttribute="trailing" id="qKJ-Qi-Gdy"/>
                 <constraint firstAttribute="centerX" secondItem="vS5-qF-ml3" secondAttribute="centerX" id="sKX-wD-wmH"/>
+                <constraint firstItem="RXm-kU-fzW" firstAttribute="top" secondItem="LGY-dP-4ge" secondAttribute="top" constant="206.5" id="tMp-xM-ppi"/>
                 <constraint firstAttribute="bottom" secondItem="LGY-dP-4ge" secondAttribute="bottom" id="uVI-ZA-4wI"/>
                 <constraint firstAttribute="bottom" secondItem="fax-0s-R5Q" secondAttribute="bottom" id="yFu-S5-EIk"/>
             </constraints>
