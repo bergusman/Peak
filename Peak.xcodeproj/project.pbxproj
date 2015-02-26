@@ -52,6 +52,7 @@
 		ADC4191A1A9D2FDD00EB0D70 /* navbar-profile@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC419191A9D2FDD00EB0D70 /* navbar-profile@2x.png */; };
 		ADC4191C1A9D2FE000EB0D70 /* navbar-plus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC4191B1A9D2FE000EB0D70 /* navbar-plus@2x.png */; };
 		ADD41A501A9DB0B900AB4F6D /* geo-pin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADD41A4F1A9DB0B900AB4F6D /* geo-pin@2x.png */; };
+		ADD41B121A9E63E700AB4F6D /* UIWindow+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD41B111A9E63E700AB4F6D /* UIWindow+Helper.m */; };
 		ADD8E72C1A92F204003AFCDE /* FilterButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD8E72B1A92F204003AFCDE /* FilterButtonView.m */; };
 		ADD8E7301A92FE0C003AFCDE /* LightRadarView.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD8E72F1A92FE0C003AFCDE /* LightRadarView.m */; };
 		ADD8E7321A92FE62003AFCDE /* radar-light@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADD8E7311A92FE62003AFCDE /* radar-light@2x.png */; };
@@ -146,6 +147,8 @@
 		ADC419191A9D2FDD00EB0D70 /* navbar-profile@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navbar-profile@2x.png"; sourceTree = "<group>"; };
 		ADC4191B1A9D2FE000EB0D70 /* navbar-plus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navbar-plus@2x.png"; sourceTree = "<group>"; };
 		ADD41A4F1A9DB0B900AB4F6D /* geo-pin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "geo-pin@2x.png"; sourceTree = "<group>"; };
+		ADD41B101A9E63E700AB4F6D /* UIWindow+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+Helper.h"; sourceTree = "<group>"; };
+		ADD41B111A9E63E700AB4F6D /* UIWindow+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+Helper.m"; sourceTree = "<group>"; };
 		ADD8E72A1A92F204003AFCDE /* FilterButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterButtonView.h; sourceTree = "<group>"; };
 		ADD8E72B1A92F204003AFCDE /* FilterButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterButtonView.m; sourceTree = "<group>"; };
 		ADD8E72E1A92FE0C003AFCDE /* LightRadarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LightRadarView.h; sourceTree = "<group>"; };
@@ -196,6 +199,8 @@
 				AD32AEC31A895211003E4037 /* UIColor+Helper.m */,
 				AD32AECE1A896745003E4037 /* UIFont+Helper.h */,
 				AD32AECF1A896745003E4037 /* UIFont+Helper.m */,
+				ADD41B101A9E63E700AB4F6D /* UIWindow+Helper.h */,
+				ADD41B111A9E63E700AB4F6D /* UIWindow+Helper.m */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -708,6 +713,7 @@
 				AD8917261A892B2900AD5D54 /* ProfileViewController.m in Sources */,
 				AD89172B1A892B3600AD5D54 /* EditProfileViewController.m in Sources */,
 				AD4AD5161A97165A005E23AE /* FilterCell.m in Sources */,
+				ADD41B121A9E63E700AB4F6D /* UIWindow+Helper.m in Sources */,
 				AD32AECD1A8966B3003E4037 /* UIImage+Helper.m in Sources */,
 				AD8917171A892ABC00AD5D54 /* MainViewController.m in Sources */,
 				AD32AED01A896745003E4037 /* UIFont+Helper.m in Sources */,

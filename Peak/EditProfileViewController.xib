@@ -91,13 +91,13 @@
                         <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="136-Wy-pnO">
                             <rect key="frame" x="0.0" y="180" width="375" height="493"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PROFILE INFO" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gHr-Up-79Y" userLabel="Title Label">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="PROFILE INFO" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gHr-Up-79Y" userLabel="Title Label">
                                     <rect key="frame" x="10" y="15" width="355" height="16"/>
                                     <fontDescription key="fontDescription" name="DINPro-Bold" family="DINPro" pointSize="12"/>
                                     <color key="textColor" red="0.17254901959999999" green="0.61176470589999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4gj-ZU-1dg" userLabel="Name Text Field" customClass="TextField">
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4gj-ZU-1dg" userLabel="Name Text Field" customClass="TextField">
                                     <rect key="frame" x="10" y="41" width="355" height="50"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="50" id="mn5-8L-NyT"/>
@@ -105,7 +105,7 @@
                                     <fontDescription key="fontDescription" name="DINPro-Regular" family="DINPro" pointSize="16"/>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardAppearance="alert" returnKeyType="next"/>
                                 </textField>
-                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VnQ-ai-nFK" userLabel="Email Text Field" customClass="TextField">
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VnQ-ai-nFK" userLabel="Email Text Field" customClass="TextField">
                                     <rect key="frame" x="10" y="101" width="355" height="50"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="50" id="lRa-zM-e9d"/>
@@ -113,7 +113,7 @@
                                     <fontDescription key="fontDescription" name="DINPro-Regular" family="DINPro" pointSize="16"/>
                                     <textInputTraits key="textInputTraits" keyboardType="emailAddress" keyboardAppearance="alert" returnKeyType="next"/>
                                 </textField>
-                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Location" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9TW-Po-zPf" userLabel="Location Text Field" customClass="TextField">
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Location" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9TW-Po-zPf" userLabel="Location Text Field" customClass="TextField">
                                     <rect key="frame" x="10" y="161" width="355" height="50"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="50" id="Bnu-Nx-6Tb"/>
@@ -121,7 +121,7 @@
                                     <fontDescription key="fontDescription" name="DINPro-Regular" family="DINPro" pointSize="16"/>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardAppearance="alert" returnKeyType="next"/>
                                 </textField>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHANGE PASSWORD" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKU-Ap-Dex" userLabel="Title Label">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="CHANGE PASSWORD" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKU-Ap-Dex" userLabel="Title Label">
                                     <rect key="frame" x="10" y="226" width="355" height="16"/>
                                     <fontDescription key="fontDescription" name="DINPro-Bold" family="DINPro" pointSize="12"/>
                                     <color key="textColor" red="0.17254901959999999" green="0.61176470589999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -151,7 +151,7 @@
                                     <fontDescription key="fontDescription" name="DINPro-Regular" family="DINPro" pointSize="16"/>
                                     <textInputTraits key="textInputTraits" keyboardType="emailAddress" keyboardAppearance="alert" returnKeyType="next" secureTextEntry="YES"/>
                                 </textField>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tx0-X2-Vq0" userLabel="Delete Button">
+                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tx0-X2-Vq0" userLabel="Delete Button">
                                     <rect key="frame" x="125" y="442" width="125" height="32"/>
                                     <fontDescription key="fontDescription" name="DINPro-Regular" family="DINPro" pointSize="15"/>
                                     <state key="normal" title="DELETE ACCOUNT">
@@ -210,13 +210,13 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MyC-HN-6T1">
                     <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sasha Grey" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="47Q-Dk-5lg">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Sasha Grey" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="47Q-Dk-5lg">
                             <rect key="frame" x="137" y="9" width="101" height="26"/>
                             <fontDescription key="fontDescription" name="DINPro-Medium" family="DINPro" pointSize="20"/>
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zSj-lI-gco">
+                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zSj-lI-gco">
                             <rect key="frame" x="321" y="4" width="38" height="36"/>
                             <fontDescription key="fontDescription" name="DINPro-Regular" family="DINPro" pointSize="18"/>
                             <state key="normal" title="Save">
@@ -227,7 +227,7 @@
                                 <action selector="saveAction:" destination="-1" eventType="touchUpInside" id="eux-B4-75t"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7eM-tn-SX6">
+                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7eM-tn-SX6">
                             <rect key="frame" x="16" y="4" width="55" height="36"/>
                             <fontDescription key="fontDescription" name="DINPro-Regular" family="DINPro" pointSize="18"/>
                             <state key="normal" title="Cancel">
