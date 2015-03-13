@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class Place;
+
 @interface PlaceCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
-
+- (void)fillWithPlace:(Place *)place;
 + (CGFloat)height;
 
 + (UINib *)nib;

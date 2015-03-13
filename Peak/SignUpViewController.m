@@ -10,6 +10,8 @@
 
 #import "UIWindow+Helper.h"
 
+#import "AppDelegate.h"
+
 @interface SignUpViewController ()
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *titleTopConstraint;
@@ -32,6 +34,15 @@
 }
 
 #pragma mark - Content
+
+- (void)signup {
+    NSString *email = self.emailTextField.text;
+    NSString *password = self.passwordTextField.text;
+    NSString *name = self.nameTextField.text;
+    
+    [[AppDelegate shared].peak signupWithEmail:email password:password name:name completion:^(NSError *error) {
+    }];
+}
 
 #pragma mark - Keyboard Notifications
 
@@ -68,7 +79,8 @@
 }
 
 - (IBAction)signUpButtonTouchUpInside:(id)sender {
-    [self.view.window.rootViewController dismissViewControllerAnimated:YES completion:nil];
+    [self signup];
+    //[self.view.window.rootViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)logInButtonTouchUpInside:(id)sender {
@@ -85,7 +97,7 @@
     } else if (textField == self.passwordTextField) {
         [self.rePasswordTextField becomeFirstResponder];
     } else if (textField == self.rePasswordTextField) {
-        [self dismissViewControllerAnimated:YES completion:nil];
+        [self signup];
     }
     return YES;
 }

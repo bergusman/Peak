@@ -8,10 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
+@class Place;
+@protocol PlaceCardCellDelegate;
+
 @interface PlaceCardCell : UICollectionViewCell
 
-- (void)fill;
+- (void)fillWithPlace:(Place *)place;
 
 + (UINib *)nib;
+
+@end
+
+@protocol PlaceCardCellDelegate <NSObject>
+
+- (void)placeCardCellDidTouchGetDirection:(PlaceCardCell *)cell;
+- (void)placeCardCellDidTouchAddToFavorites:(PlaceCardCell *)cell;
 
 @end

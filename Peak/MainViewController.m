@@ -20,6 +20,9 @@
 #import "UIColor+Helper.h"
 #import "UIImage+Helper.h"
 
+#import "Paginator.h"
+#import "AppDelegate.h"
+
 #import <Mapbox-iOS-SDK/Mapbox.h>
 
 @interface MainViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UITableViewDataSource, UITableViewDelegate>
@@ -37,6 +40,8 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (strong, nonatomic) NSArray *filters;
+
+@property (strong, nonatomic) Paginator *places;
 
 @end
 
@@ -135,6 +140,24 @@
     self.filterTableView.alpha = 0;
 }
 
+- (void)setupPlaces {
+    self.places = [Paginator paginatorWithLoader:^(NSNumber *limit, NSNumber *offset, PaginatorLoadingResult result) {
+        [[AppDelegate shared].peak placesWithLimit:limit offset:offset completion:^(NSArray *places, NSError *error) {
+            if (error) {
+                result(nil, error);
+            } else {
+                result(places, nil);
+            }
+        }];
+    }];
+    
+    __weak typeof(self) welf = self;
+    self.places.loaded = ^(Paginator *paginator) {
+        [welf.tableView reloadData];
+        [welf.collectionView reloadData];
+    };
+}
+
 #pragma mark - Content
 
 - (void)showFilter {
@@ -177,15 +200,27 @@
     }
 }
 
+#pragma mark - PlaceCardCellDelegate
+
+- (void)placeCardCellDidTouchGetDirection:(PlaceCardCell *)cell {
+    
+}
+
+- (void)placeCardCellDidTouchAddToFavorites:(PlaceCardCell *)cell {
+    
+}
+
+
 #pragma mark - UICollectionViewDataSource
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 10;
+    return self.places.items.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     PlaceCardCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
-    [cell fill];
+    Place *place = self.places.items[indexPath.row];
+    [cell fillWithPlace:place];
     return cell;
 }
 
@@ -202,7 +237,7 @@
     if (tableView == self.filterTableView) {
         return [self.filters count];
     } else {
-        return 20;
+        return self.places.items.count;
     }
 }
 
@@ -212,7 +247,9 @@
         cell.titleLabel.text = self.filters[indexPath.row];
         return cell;
     } else {
+        Place *place = self.places.items[indexPath.row];
         PlaceCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+        [cell fillWithPlace:place];
         return cell;
     }
 }
@@ -271,6 +308,9 @@
     [self setupCollectionView];
     [self setupTableView];
     [self setupFilter];
+    [self setupPlaces];
+    
+    [self.places loadNext];
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.05 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self.mapView setZoom:13 atCoordinate:CLLocationCoordinate2DMake(40.746764, -73.990667) animated:NO];

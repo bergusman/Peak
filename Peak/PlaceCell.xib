@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14D72i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7519.1" systemVersion="14D87h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7513.1"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="DINPro-Bold.otf">
@@ -22,35 +22,35 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NIGHT BAR" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oCB-za-ozs">
-                        <rect key="frame" x="79" y="17" width="181" height="15.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NIGHT BAR" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oCB-za-ozs" userLabel="Title Label">
+                        <rect key="frame" x="79" y="17" width="181" height="16"/>
                         <fontDescription key="fontDescription" name="DINPro-Bold" family="DINPro" pointSize="12"/>
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2-AVENUE 34, NEW YORK US" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mhk-yr-qfR">
-                        <rect key="frame" x="79" y="34" width="181" height="13"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2-AVENUE 34, NEW YORK US" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mhk-yr-qfR" userLabel="Address Label">
+                        <rect key="frame" x="79" y="35" width="181" height="13"/>
                         <fontDescription key="fontDescription" name="DINPro-Regular" family="DINPro" pointSize="10"/>
                         <color key="textColor" red="1" green="1" blue="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fhf-2x-y1N">
-                        <rect key="frame" x="10" y="10" width="48" height="47.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fhf-2x-y1N" userLabel="Hours Label">
+                        <rect key="frame" x="10" y="10" width="48" height="47"/>
                         <string key="text">10:00
 24:00</string>
                         <fontDescription key="fontDescription" name="DINPro-Regular" family="DINPro" pointSize="12"/>
                         <color key="textColor" red="1" green="1" blue="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view contentMode="scaleToFill" horizontalHuggingPriority="252" placeholderIntrinsicWidth="1" placeholderIntrinsicHeight="infinite" translatesAutoresizingMaskIntoConstraints="NO" id="FKJ-D6-woH" customClass="VerticalSeparatorView">
-                        <rect key="frame" x="68" y="12" width="1" height="43.5"/>
+                    <view contentMode="scaleToFill" horizontalHuggingPriority="252" placeholderIntrinsicWidth="1" placeholderIntrinsicHeight="infinite" translatesAutoresizingMaskIntoConstraints="NO" id="FKJ-D6-woH" userLabel="Separator View" customClass="VerticalSeparatorView">
+                        <rect key="frame" x="68" y="12" width="1" height="43"/>
                         <color key="backgroundColor" red="0.73333333333333328" green="0.35686274509803922" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <view contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="dyz-FJ-dX7" customClass="HorizontalSeparatorView">
-                        <rect key="frame" x="0.0" y="66.5" width="320" height="1"/>
+                    <view contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="dyz-FJ-dX7" userLabel="Separator View" customClass="HorizontalSeparatorView">
+                        <rect key="frame" x="0.0" y="66" width="320" height="1"/>
                         <color key="backgroundColor" red="0.1803921568627451" green="0.18823529411764706" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="radar-dark.png" translatesAutoresizingMaskIntoConstraints="NO" id="l3Z-AF-CyU">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="radar-dark.png" translatesAutoresizingMaskIntoConstraints="NO" id="l3Z-AF-CyU" userLabel="Radar Image View">
                         <rect key="frame" x="260" y="9" width="50" height="50"/>
                     </imageView>
                 </subviews>
@@ -76,6 +76,11 @@
                     <constraint firstItem="FKJ-D6-woH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="zlZ-6M-1lA"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="addressLabel" destination="Mhk-yr-qfR" id="e29-Xb-lf6"/>
+                <outlet property="hoursLabel" destination="Fhf-2x-y1N" id="7CH-ng-fJ6"/>
+                <outlet property="titleLabel" destination="oCB-za-ozs" id="ezw-Aj-GAr"/>
+            </connections>
             <point key="canvasLocation" x="362" y="326"/>
         </tableViewCell>
     </objects>

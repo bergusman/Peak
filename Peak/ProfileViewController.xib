@@ -17,8 +17,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController">
             <connections>
                 <outlet property="avatarView" destination="SrY-DN-CzY" id="lIk-h9-R3D"/>
+                <outlet property="editButton" destination="fNd-CQ-XZy" id="5ab-3m-ROY"/>
                 <outlet property="headerView" destination="ehF-oS-lvZ" id="u3C-2o-CQx"/>
                 <outlet property="homeLabel" destination="Rib-ef-bqj" id="adw-qB-BXC"/>
+                <outlet property="homeView" destination="TUa-N8-M9c" id="VI5-dl-2BH"/>
+                <outlet property="nameLabel" destination="ufb-Td-gyB" id="V1Z-cN-CtB"/>
                 <outlet property="tableView" destination="khY-pL-l5y" id="BMn-B7-5Iz"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

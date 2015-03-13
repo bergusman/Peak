@@ -18,6 +18,14 @@
 
 @implementation CommentCell
 
+- (void)fillWithComment:(Comment *)comment {
+    [self.avatarView setImageWithURL:[NSURL URLWithString:@"http://graph.facebook.com/SashaGrey/picture?type=large"]];
+}
+
++ (CGFloat)heightWithComment:(Comment *)comment {
+    return 140;
+}
+
 - (void)fill {
     [self.avatarView setImageWithURL:[NSURL URLWithString:@"http://graph.facebook.com/SashaGrey/picture?type=large"]];
 }
@@ -25,6 +33,8 @@
 + (CGFloat)height {
     return 140;
 }
+
+#pragma mark - Nibbing
 
 + (UINib *)nib {
     return [UINib nibWithNibName:@"CommentCell" bundle:nil];

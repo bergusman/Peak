@@ -28,6 +28,15 @@
             <connections>
                 <outlet property="avatarButton" destination="xoo-gh-nxN" id="FPg-R4-5lh"/>
                 <outlet property="avatarView" destination="9mJ-e8-S7R" id="8Id-ZU-4x5"/>
+                <outlet property="cancelButton" destination="7eM-tn-SX6" id="Rub-XZ-iPZ"/>
+                <outlet property="emailTextField" destination="VnQ-ai-nFK" id="2fq-Tv-MJM"/>
+                <outlet property="locationTextField" destination="9TW-Po-zPf" id="70P-5c-v27"/>
+                <outlet property="nameLabel" destination="47Q-Dk-5lg" id="C59-ty-Y35"/>
+                <outlet property="nameTextField" destination="4gj-ZU-1dg" id="rcr-Dh-19C"/>
+                <outlet property="oldPasswordTextField" destination="54V-mb-YuG" id="KLT-je-Pf9"/>
+                <outlet property="passwordTextField" destination="TQr-VS-L7D" id="8DP-er-KgG"/>
+                <outlet property="rePasswordTextField" destination="Xvf-2I-ciL" id="pJn-JB-RBJ"/>
+                <outlet property="saveButton" destination="zSj-lI-gco" id="mWa-gy-9bi"/>
                 <outlet property="scrollView" destination="Mfn-DX-kwi" id="PbU-Ov-79v"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -104,6 +113,9 @@
                                     </constraints>
                                     <fontDescription key="fontDescription" name="DINPro-Regular" family="DINPro" pointSize="16"/>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardAppearance="alert" returnKeyType="next"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="aGS-D0-bvT"/>
+                                    </connections>
                                 </textField>
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VnQ-ai-nFK" userLabel="Email Text Field" customClass="TextField">
                                     <rect key="frame" x="10" y="101" width="355" height="50"/>
@@ -112,6 +124,9 @@
                                     </constraints>
                                     <fontDescription key="fontDescription" name="DINPro-Regular" family="DINPro" pointSize="16"/>
                                     <textInputTraits key="textInputTraits" keyboardType="emailAddress" keyboardAppearance="alert" returnKeyType="next"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="sIo-s6-CLc"/>
+                                    </connections>
                                 </textField>
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Location" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9TW-Po-zPf" userLabel="Location Text Field" customClass="TextField">
                                     <rect key="frame" x="10" y="161" width="355" height="50"/>
@@ -120,6 +135,9 @@
                                     </constraints>
                                     <fontDescription key="fontDescription" name="DINPro-Regular" family="DINPro" pointSize="16"/>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardAppearance="alert" returnKeyType="next"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="mQ1-zB-Adg"/>
+                                    </connections>
                                 </textField>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="CHANGE PASSWORD" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKU-Ap-Dex" userLabel="Title Label">
                                     <rect key="frame" x="10" y="226" width="355" height="16"/>
@@ -134,6 +152,9 @@
                                     </constraints>
                                     <fontDescription key="fontDescription" name="DINPro-Regular" family="DINPro" pointSize="16"/>
                                     <textInputTraits key="textInputTraits" keyboardType="emailAddress" keyboardAppearance="alert" returnKeyType="next" secureTextEntry="YES"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="LAx-mj-BFe"/>
+                                    </connections>
                                 </textField>
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="New Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TQr-VS-L7D" userLabel="Password Text Field" customClass="TextField">
                                     <rect key="frame" x="10" y="311" width="355" height="50"/>
@@ -142,6 +163,9 @@
                                     </constraints>
                                     <fontDescription key="fontDescription" name="DINPro-Regular" family="DINPro" pointSize="16"/>
                                     <textInputTraits key="textInputTraits" keyboardType="emailAddress" keyboardAppearance="alert" returnKeyType="next" secureTextEntry="YES"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="4A1-Ks-o66"/>
+                                    </connections>
                                 </textField>
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Re-Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xvf-2I-ciL" userLabel="Re-password Text Field" customClass="TextField">
                                     <rect key="frame" x="10" y="371" width="355" height="50"/>
@@ -150,6 +174,9 @@
                                     </constraints>
                                     <fontDescription key="fontDescription" name="DINPro-Regular" family="DINPro" pointSize="16"/>
                                     <textInputTraits key="textInputTraits" keyboardType="emailAddress" keyboardAppearance="alert" returnKeyType="next" secureTextEntry="YES"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="9YZ-gk-tbP"/>
+                                    </connections>
                                 </textField>
                                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tx0-X2-Vq0" userLabel="Delete Button">
                                     <rect key="frame" x="125" y="442" width="125" height="32"/>

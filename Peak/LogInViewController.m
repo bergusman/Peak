@@ -12,6 +12,8 @@
 
 #import "UIWindow+Helper.h"
 
+#import "AppDelegate.h"
+
 // TODO: animate blue border of text fields
 
 @interface LogInViewController () <UITextFieldDelegate>
@@ -31,6 +33,17 @@
 - (void)setupKeyboardNotifications {
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShowNotification:) name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHideNotification:) name:UIKeyboardWillHideNotification object:nil];
+}
+
+#pragma mark - Content
+
+- (void)logIn {
+    NSString *email = self.emailTextField.text;
+    NSString *password = self.passwordTextField.text;
+    
+    [[AppDelegate shared].peak loginWithEmail:email password:password completion:^(NSError *error) {
+        
+    }];
 }
 
 #pragma mark - Keyboard Notifications
@@ -68,7 +81,7 @@
 }
 
 - (IBAction)logInButtonTouchUpInside:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self logIn];
 }
 
 - (IBAction)signUpButtonTouchUpInside:(id)sender {
@@ -82,7 +95,7 @@
     if (textField == self.emailTextField) {
         [self.passwordTextField becomeFirstResponder];
     } else if (textField == self.passwordTextField) {
-        [self dismissViewControllerAnimated:YES completion:nil];
+        [self logIn];
     }
     return YES;
 }

@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Peak.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) Peak *peak;
 
++ (AppDelegate *)shared;
 
 @end
 

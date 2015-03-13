@@ -8,10 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@class Comment;
+
 @interface CommentCell : UITableViewCell
 
-- (void)fill;
+- (void)fillWithComment:(Comment *)comment;
++ (CGFloat)heightWithComment:(Comment *)comment;
 
+- (void)fill;
 + (CGFloat)height;
 
 + (UINib *)nib;

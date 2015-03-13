@@ -12,18 +12,40 @@
 
 #import "UIImage+Helper.h"
 
-@interface EditProfileViewController () <UIActionSheetDelegate>
+#import "AppDelegate.h"
+
+#define NULL_TO_EMPTY(str) ((str) ?: @"")
+
+@interface EditProfileViewController () <UITextFieldDelegate, UIActionSheetDelegate>
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
+@property (weak, nonatomic) IBOutlet UIButton *cancelButton;
+@property (weak, nonatomic) IBOutlet UIButton *saveButton;
+
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+
 @property (weak, nonatomic) IBOutlet LoadingImageView *avatarView;
 @property (weak, nonatomic) IBOutlet UIButton *avatarButton;
+
+@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *emailTextField;
+@property (weak, nonatomic) IBOutlet UITextField *locationTextField;
+@property (weak, nonatomic) IBOutlet UITextField *oldPasswordTextField;
+@property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
+@property (weak, nonatomic) IBOutlet UITextField *rePasswordTextField;
 
 @end
 
 @implementation EditProfileViewController
 
 #pragma mark - Setups
+
+- (void)setupAvatarButton {
+    UIImage *bg = [UIImage imageWithSize:CGSizeMake(6, 6) color:[[UIColor blackColor] colorWithAlphaComponent:0.6]];
+    bg = [bg resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0) resizingMode:UIImageResizingModeStretch];
+    [self.avatarButton setBackgroundImage:bg forState:UIControlStateHighlighted];
+}
 
 - (void)setupKeyboardNotifications {
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShowNotification:) name:UIKeyboardWillShowNotification object:nil];
@@ -35,9 +57,66 @@
 - (void)fillProfile {
     [self.avatarView setImageWithURL:[NSURL URLWithString:@"http://graph.facebook.com/SashaGrey/picture?type=large"]];
     
-    UIImage *bg = [UIImage imageWithSize:CGSizeMake(6, 6) color:[[UIColor blackColor] colorWithAlphaComponent:0.6]];
-    bg = [bg resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0) resizingMode:UIImageResizingModeStretch];
-    [self.avatarButton setBackgroundImage:bg forState:UIControlStateHighlighted];
+    User *me = [AppDelegate shared].peak.me;
+    
+    self.nameLabel.text = me.name;
+    
+    self.nameTextField.text = me.name;
+    self.emailTextField.text = me.email;
+    self.locationTextField.text = me.location;
+}
+
+- (void)tryCancel {
+    if ([self hasChanges]) {
+        [self confirmCancel];
+    } else {
+        [self cancel];
+    }
+}
+
+- (void)confirmCancel {
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:@"You have profile canges" preferredStyle:UIAlertControllerStyleActionSheet];
+    
+    UIAlertAction *action;
+    action = [UIAlertAction actionWithTitle:@"Don't save and cancel" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
+        [self cancel];
+    }];
+    [alertController addAction:action];
+    
+    action = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil];
+    [alertController addAction:action];
+    
+    [self presentViewController:alertController animated:YES completion:nil];
+}
+
+- (void)cancel {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (BOOL)hasChanges {
+    if (self.passwordTextField.text.length > 0 || self.rePasswordTextField.text.length > 0) {
+        return YES;
+    }
+    
+    User *me = [AppDelegate shared].peak.me;
+    User *user = [self fields];
+    
+    return !([user.name isEqualToString:me.name] && [user.email isEqualToString:me.email] && [user.location isEqualToString:me.location]);
+}
+
+- (User *)fields {
+    User *user = [[User alloc] init];
+    user.name = self.nameTextField.text;
+    user.email = self.emailTextField.text;
+    user.location = self.locationTextField.text;
+    return user;
+}
+
+- (void)trySave {
+    User *user = [self fields];
+    [[AppDelegate shared].peak updateMe:user completion:^(User *user, NSError *error) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }];
 }
 
 #pragma mark - Keyboard Notifications
@@ -74,11 +153,11 @@
 #pragma mark - Actions
 
 - (IBAction)cancelAction:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self tryCancel];
 }
 
 - (IBAction)saveAction:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self trySave];
 }
 
 - (IBAction)tapAction:(id)sender {
@@ -104,10 +183,28 @@
     [actionSheet showInView:self.view];
 }
 
+#pragma mark - UITextFieldDelegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    if (textField == self.nameTextField) {
+        [self.emailTextField becomeFirstResponder];
+    } else if (textField == self.emailTextField) {
+        [self.locationTextField becomeFirstResponder];
+    } else if (textField == self.locationTextField) {
+        [self.oldPasswordTextField becomeFirstResponder];
+    } else if (textField == self.oldPasswordTextField) {
+        [self.passwordTextField becomeFirstResponder];
+    } else if (textField == self.passwordTextField) {
+        [self.rePasswordTextField becomeFirstResponder];
+    }
+    return YES;
+}
+
 #pragma mark - UIViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setupAvatarButton];
     [self setupKeyboardNotifications];
     [self fillProfile];
 }

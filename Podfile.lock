@@ -20,6 +20,14 @@ PODS:
   - AFNetworking/UIKit (2.5.1):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - CocoaLumberjack (2.0.0-rc2):
+    - CocoaLumberjack/Default (= 2.0.0-rc2)
+    - CocoaLumberjack/Extensions (= 2.0.0-rc2)
+  - CocoaLumberjack/Core (2.0.0-rc2)
+  - CocoaLumberjack/Default (2.0.0-rc2):
+    - CocoaLumberjack/Core
+  - CocoaLumberjack/Extensions (2.0.0-rc2):
+    - CocoaLumberjack/Default
   - FlurrySDK (5.4.0):
     - FlurrySDK/FlurrySDK (= 5.4.0)
   - FlurrySDK/FlurrySDK (5.4.0)
@@ -43,6 +51,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
+  - CocoaLumberjack (= 2.0.0-rc2)
   - FlurrySDK
   - Mapbox-iOS-SDK
   - Reveal-iOS-SDK (~> 1.5)
@@ -50,6 +59,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: 8bee59492a6ff15d69130efa4d0dc67e0094a52a
+  CocoaLumberjack: 6027cd9a0665203a7df456c526e137f02cd547e1
   FlurrySDK: bed9e5598353f867508d164795a451e3ada92cb6
   FMDB: 31ec26773c7f7b7890a6038235a1f2bbd933a7cb
   GRMustache: efecd3b603f0a7a99cf6bdf3998782ee0c465726
